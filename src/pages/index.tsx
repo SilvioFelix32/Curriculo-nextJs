@@ -6,17 +6,19 @@ import { ExperienceSection } from "../components/ExperienceSection";
 import { Skills } from "../components/Skills";
 
 //styles
-import { Wrapper, TopBox } from "../styles";
+import { Wrapper, TopBox, Content } from "../styles";
 
 const Home: NextPage = () => {
   return (
     <Wrapper>
-      <TopBox>
-        <Profile />
-        <PersonalData />
-      </TopBox>
-      <ExperienceSection />
-      <Skills />
+      <Content>
+        <TopBox>
+          <Profile />
+          <PersonalData />
+        </TopBox>
+        <ExperienceSection />
+        <Skills />
+      </Content>
     </Wrapper>
   );
 };

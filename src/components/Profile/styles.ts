@@ -18,18 +18,44 @@ export const Content = styled.div`
   .name {
     padding-top: 15px;
     color: var(--blue);
-    font-size: 2.5vw;
+    font-size: 42px;
     font-weight: 600;
     text-align: center;
     font-family: 500;
+
+    @media screen and (max-width: 1366px) {
+      font-size: 38px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 36px;
+    }
+    @media screen and (max-width: 428px) {
+      font-size: 32px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 28px;
+    }
   }
 
   .stack {
-    color: grey;
-    font-size: 2vw;
+    color: var(--gray);
+    font-size: 32px;
     font-weight: 600;
     font-family: 500;
     text-align: center;
+
+    @media screen and (max-width: 1366px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: 428px) {
+      font-size: 26px;
+    }
+    @media screen and (max-width: 360px) {
+      font-size: 24px;
+    }
   }
 `;
 
@@ -42,5 +68,22 @@ export const Picture = styled.div`
   .image {
     border-radius: 100%;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 1366px) {
+    width: 320px;
+    height: 320px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+  @media screen and (max-width: 428px) {
+    width: 280px;
+    height: 280px;
+  }
+  @media screen and (max-width: 360px) {
+    width: 250px;
+    height: 250px;
   }
 `;

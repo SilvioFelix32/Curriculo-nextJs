@@ -9,18 +9,40 @@ export const Wrapper = styled.div`
   margin: auto;
   min-width: 50%;
 
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 1366px) {
     min-width: 70%;
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 60%;
+  }
+  @media screen and (max-width: 428px) {
+    min-width: 60%;
+  }
+  @media screen and (max-width: 360px) {
+    min-width: 60%;
   }
 `;
 
 export const Title = styled.h1`
-  margin-top: 15px;
+  margin-top: 12px;
   text-align: center;
-  font-size: 2.2vw;
+  font-size: 42px;
   font-weight: 600;
   font-family: 500;
   color: var(--blue);
+
+  @media screen and (max-width: 1366px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 22px;
+  }
 `;
 
 export const Box = styled.div`
@@ -29,21 +51,44 @@ export const Box = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 10px 0;
 `;
 
 export const Content = styled.div`
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
 `;
 
 export const Text = styled.p`
+  display: flex;
+  flex-direction: row;
   padding: 0 25px;
-  font-size: 1.5vw;
+  font-size: 32px;
   font-weight: 500;
   font-family: 500;
   color: var(--blue);
   letter-spacing: 0.1rem;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 26px;
+    padding: 0 22px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+    padding: 0 18px;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  &.title {
+    font-weight: 600;
+  }
 `;
 
 export const SocialMedia = styled.div`
@@ -55,7 +100,8 @@ export const SocialMedia = styled.div`
 
 export const Button = styled.button`
   cursor: pointer;
-  width: 100%;
+  height: 62px;
+  width: 62px;
   padding: 5px;
   font-family: 500;
   background-color: var(--white);
@@ -65,8 +111,8 @@ export const Button = styled.button`
   border-bottom: solid 1px var(--gray);
 
   svg {
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width: 100%;
     color: var(--blue);
     transform: scale(1);
 
@@ -74,11 +120,6 @@ export const Button = styled.button`
       filter: brightness(0.9);
       transform: scale(1.2);
       animation: wiggle 2s linear infinite;
-    }
-
-    @media screen and (max-width: 720px) {
-      height: 25px;
-      width: 25px;
     }
 
     /* Keyframes */

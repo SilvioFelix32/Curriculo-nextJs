@@ -6,7 +6,7 @@ export function Profile() {
     <Wrapper>
       <Picture>
         <Image
-          src={"/images/me.jpg"}
+          src={"/images/picture.jpg"}
           alt="Picture_Of_author"
           height={350}
           width={350}

@@ -17,12 +17,25 @@ export function PersonalData() {
       <Title>Sobre Mim</Title>
       <Box>
         <Content>
-          <Text>Nome: Silvio Emanoel de Oliveira Félix</Text>
-          <Text>Idade: 25 anos</Text>
-          <Text>Cidade: Piúma</Text>
-          <Text>Estado: Espirito Santo</Text>
-          <Text>Telefone: (28) 99900-2593</Text>
-          <Text>Email: silvio.felix32@hotmail.com</Text>
+          <Text>
+            <Text className="title">Nome:</Text> Silvio Emanoel de Oliveira
+            Félix
+          </Text>
+          <Text>
+            <Text className="title">Idade:</Text> 25 anos
+          </Text>
+          <Text>
+            <Text className="title">Cidade:</Text> Piúma
+          </Text>
+          <Text>
+            <Text className="title">Estado:</Text> Espirito Santo
+          </Text>
+          <Text>
+            <Text className="title">Telefone:</Text> (28) 99900-2593
+          </Text>
+          <Text>
+            <Text className="title">Email:</Text> silvio.felix32@hotmail.com
+          </Text>
         </Content>
         <SocialMedia>
           <Button

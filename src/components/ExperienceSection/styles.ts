@@ -1,32 +1,60 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 95%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   margin: 15px auto;
   padding: 20px;
-  background-color: var(--gray);
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 `;
 
 export const Title = styled.h1`
-  font-size: 2.2vw;
+  font-size: 42px;
   font-weight: 600;
   font-family: 500;
   color: var(--blue);
+  margin-bottom: 15px;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 22px;
+  }
 `;
 
 export const Text = styled.p`
-  font-size: 1.5vw;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 300;
   font-family: 500;
-  color: var(--blue);
+  color: var(--gray);
   letter-spacing: 0.1rem;
+  text-align: center;
+  max-width: 1300px;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 26px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
+  }
 `;
