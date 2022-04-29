@@ -1,3 +1,5 @@
+import React from "react";
+import { Popup } from "semantic-ui-react";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 //styles
@@ -9,6 +11,7 @@ import {
   Box,
   SocialMedia,
   Button,
+  HoverText,
 } from "./styles";
 
 export function PersonalData() {
@@ -38,12 +41,19 @@ export function PersonalData() {
           </Text>
         </Content>
         <SocialMedia>
-          <Button
-            className="pdf"
-            onClick={() => window.open("/documents/curriculo.pdf")}
-          >
-            <FaFileDownload />
-          </Button>
+          <Popup
+            content={<HoverText>Baixar PDF</HoverText>}
+            position="top center"
+            offset={[0, 10]}
+            trigger={
+              <Button
+                className="pdf"
+                onClick={() => window.open("/documents/curriculo.pdf")}
+              >
+                <FaFileDownload />
+              </Button>
+            }
+          />
           <Button
             onClick={() => window.open("https://github.com/SilvioFelix32")}
           >

@@ -65,7 +65,7 @@ export const Content = styled.div`
 export const Text = styled.p`
   display: flex;
   flex-direction: row;
-  padding: 0 25px;
+  padding: 0 10px;
   font-size: 32px;
   font-weight: 500;
   font-family: 500;
@@ -97,6 +97,31 @@ export const Text = styled.p`
 export const SocialMedia = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const HoverText = styled.div`
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 10;
+  color: var(--blue);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 500;
+
+  @media screen and (max-width: 1366px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 10px;
+  }
 `;
 
 export const Button = styled.button`
