@@ -74,19 +74,19 @@ export const Text = styled.p`
 
   @media screen and (max-width: 1366px) {
     font-size: 26px;
-    padding: 0 22px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 22px;
     padding: 0 18px;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    padding: 0 12px;
+  }
   @media screen and (max-width: 428px) {
-    font-size: 16px;
-    padding: 0 16px;
+    font-size: 14px;
+    padding: 0 8px;
   }
   @media screen and (max-width: 360px) {
     font-size: 12px;
-    padding: 0 12px;
+    padding: 0 6px;
   }
 
   &.title {
@@ -162,13 +162,13 @@ export const Button = styled.button`
     padding: 3px;
   }
   @media screen and (max-width: 428px) {
-    height: 42px;
-    width: 42px;
+    height: 32px;
+    width: 32px;
     padding: 3px;
   }
   @media screen and (max-width: 360px) {
-    height: 32px;
-    width: 32px;
+    height: 28px;
+    width: 28px;
     padding: 3px;
   }
 `;
