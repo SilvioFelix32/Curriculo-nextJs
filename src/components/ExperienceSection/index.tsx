@@ -39,7 +39,7 @@ export function ExperienceSection() {
         <Content>
           <Title>Minha História:</Title>
           <Text>
-            Embora tenha começado minha carrerira como um pintor, sempre tive uma paixão por
+            Embora tenha começado minha carreira como um pintor, sempre tive uma paixão por
             tecnologias, e por isso eu ansiava aprender mais, ansiava aprender
             algo diferente.
           </Text>
