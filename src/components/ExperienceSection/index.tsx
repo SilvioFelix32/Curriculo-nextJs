@@ -45,7 +45,7 @@ export function ExperienceSection() {
           </Text>
           <Text>
             E foi ai que aconteceu: aquela chama se ascendeu no momento que eu
-            cliquei em reproduzir no meu primeiro vídeo tutorial em JavaScritp.
+            cliquei em reproduzir no meu primeiro vídeo tutorial em JavaScript.
             <br /> O desenvolvimento web chama todas as minhas paixões: ele
             incorpora criatividade e solução de problemas.
           </Text>
@@ -58,9 +58,8 @@ export function ExperienceSection() {
             <br />
             - Ajudar tanto quanto possível á contribuir para que todos os
             projetos sejam feitos com excelência e dentro do prazo.
-            <br />- Absorver experiéncia ao máximo junto á equipe/empresa e
-            concluir todos os desafios propostos, não importando as
-            dificuldades.
+            <br />- Absorver experiéncia ao máximo junto a equipe/empresa e
+            concluir todos os desafios propostos.
           </Text>
         </Content>
         <Content>
