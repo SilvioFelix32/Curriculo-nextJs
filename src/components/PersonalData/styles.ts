@@ -67,7 +67,7 @@ export const Text = styled.p`
   flex-direction: row;
   padding: 0 10px;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 300;
   font-family: 500;
   color: var(--blue);
   letter-spacing: 0.1rem;

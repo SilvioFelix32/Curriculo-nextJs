@@ -42,4 +42,12 @@ export const GlobalStyles = createGlobalStyle`
         opacity: 0.6;
         cursor: not-allowed;
     }
+
+    .react-multiple-carousel__arrow--right {
+    right: 0;
+  }
+
+  .react-multiple-carousel__arrow--left {
+    left: 0;
+  }
 `;

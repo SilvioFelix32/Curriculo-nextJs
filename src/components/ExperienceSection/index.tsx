@@ -29,6 +29,7 @@ export function ExperienceSection() {
       <Carousel
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
+        showDots={true}
         infinite={true}
         autoPlaySpeed={10000}
         keyBoardControl={true}
@@ -38,7 +39,7 @@ export function ExperienceSection() {
         <Content>
           <Title>Minha História:</Title>
           <Text>
-            Embora tenha trabalhado como pintor, sempre tive uma paixão por
+            Embora tenha começado minha carrerira como um pintor, sempre tive uma paixão por
             tecnologias, e por isso eu ansiava aprender mais, ansiava aprender
             algo diferente.
           </Text>
@@ -46,8 +47,7 @@ export function ExperienceSection() {
             E foi ai que aconteceu: aquela chama se ascendeu no momento que eu
             cliquei em reproduzir no meu primeiro vídeo tutorial em JavaScritp.
             <br /> O desenvolvimento web chama todas as minhas paixões: ele
-            incorpora criatividade e solução de problemas e eu posso quebra-lo
-            para melhorar o código.
+            incorpora criatividade e solução de problemas.
           </Text>
         </Content>
         <Content>
