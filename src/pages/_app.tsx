@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Sf-tech</title>
+        <link rel="shortcut icon" href="/favicon.jpg" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />
