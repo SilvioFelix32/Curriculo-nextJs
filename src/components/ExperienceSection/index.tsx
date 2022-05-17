@@ -39,7 +39,7 @@ export function ExperienceSection() {
         <Content>
           <Title>Minha História:</Title>
           <Text>
-            Embora tenha começado minha carreira como um pintor, sempre tive uma paixão por
+            Desde Jovem, sempre tive uma paixão por
             tecnologias, e por isso eu ansiava aprender mais, ansiava aprender
             algo diferente.
           </Text>
@@ -47,7 +47,7 @@ export function ExperienceSection() {
             E foi ai que aconteceu: aquela chama se ascendeu no momento que eu
             cliquei em reproduzir no meu primeiro vídeo tutorial em JavaScript.
             <br /> O desenvolvimento web chama todas as minhas paixões: ele
-            incorpora criatividade e solução de problemas.
+            incorpora criatividade e solução de problemas...
           </Text>
         </Content>
         <Content>
