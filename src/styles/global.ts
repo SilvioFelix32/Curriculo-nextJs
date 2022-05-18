@@ -45,8 +45,8 @@ export const GlobalStyles = createGlobalStyle`
         background-color: #0B1222;
         border-radius: 50%;
         padding: 5px;
-        height: 40px;
-        width: 40px;
+        height:100%;
+        width: 100%;
     }
 
 
