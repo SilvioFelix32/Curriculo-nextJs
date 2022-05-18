@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   align-items: center;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: auto;
   min-width: 54%;
   min-height: 465px;
 
@@ -36,7 +35,7 @@ export const Title = styled.h1`
   font-size: 42px;
   font-weight: 600;
   font-family: 500;
-  color: var(--blue);
+  color: ${(props) => props.theme.colors.textTitle};
 
   @media screen and (max-width: 1366px) {
     margin-top: 20px;
@@ -90,7 +89,7 @@ export const Text = styled.p`
   font-size: 32px;
   font-weight: 300;
   font-family: 500;
-  color: var(--blue);
+  color: ${(props) => props.theme.colors.textTitle};
   letter-spacing: 0.1rem;
 
   @media screen and (max-width: 1366px) {
@@ -124,7 +123,7 @@ export const HoverText = styled.div`
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 10;
-  color: var(--blue);
+  color: ${(props) => props.theme.colors.textContent};
   border-radius: 10px;
   padding: 10px;
   font-size: 16px;
@@ -151,20 +150,18 @@ export const Button = styled.button`
   width: 62px;
   padding: 7px;
   font-family: 500;
-  background-color: var(--white);
-  border-top: solid 1px var(--gray);
-  border-right: none;
-  border-left: solid 1px var(--gray);
-  border-bottom: solid 1px var(--gray);
+  background-color: ${(props) => props.theme.colors.primary};
+  border: none;
 
   svg {
     height: 100%;
     width: 100%;
-    color: var(--blue);
+    color: ${(props) => props.theme.colors.textTitle};
     transform: scale(1);
 
     &:hover {
-      filter: brightness(0.9);
+      color: ${(props) => props.theme.colors.secundary};
+      fill: ${(props) => props.theme.colors.background};
       transform: scale(1.2);
       animation: wiggle 2s linear infinite;
     }

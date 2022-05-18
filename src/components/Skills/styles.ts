@@ -12,7 +12,7 @@ export const Title = styled.h1`
   font-size: 38px;
   font-weight: 600;
   font-family: 500;
-  color: var(--blue);
+  color: ${(props) => props.theme.colors.textTitle};
 
   @media screen and (max-width: 1366px) {
     font-size: 26px;
@@ -31,7 +31,7 @@ export const Title = styled.h1`
 export const Context = styled.div`
   display: flex;
   flex-direction: column;
-  `;
+`;
 
 export const Content = styled.div`
   display: flex;
@@ -52,13 +52,12 @@ export const Selector = styled.button`
   width: 100%;
   min-width: 130px;
   padding: 16px;
-  color: var(--blue);
-  background-color: var(--white);
+  color: ${(props) => props.theme.colors.color};
+  background-color: ${(props) => props.theme.colors.secundary};
   font-size: 24px;
   font-weight: 600;
   font-family: 500;
   border: none;
-  border-radius: 8px 8px 0 0;
   cursor: pointer;
 
   &:hover {
@@ -66,8 +65,8 @@ export const Selector = styled.button`
   }
 
   &.selected {
-    color: var(--white);
-    background-color: var(--blue);
+    color:${(props) => props.theme.colors.secundary};
+    background-color: ${(props) => props.theme.colors.color};
   }
 
   @media screen and (max-width: 1366px) {

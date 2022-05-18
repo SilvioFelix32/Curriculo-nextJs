@@ -1,13 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyles = createGlobalStyle`
-    :root {
-        --white: #FFFFFF;
-        --gray: ##5a6473;
-        --blue: #00088b;
-        --blue-light:  #f1f1ff;
-    }    
-
+export const GlobalStyles = createGlobalStyle` 
     * {
         margin: 0;
         padding: 0;
@@ -25,8 +18,8 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background: var(--background);
         -webkit-font-smoothing: antialiased;
+       background: ${(props) => props.theme.colors.primary};
     }
 
     body, input, textarea, button {
@@ -42,6 +35,34 @@ export const GlobalStyles = createGlobalStyle`
         opacity: 0.6;
         cursor: not-allowed;
     }
+
+    .handler {
+        height: 100%;
+        width: 100%;
+
+    svg{
+        color: yellow;
+        background-color: #0B1222;
+        border-radius: 50%;
+        padding: 5px;
+        height: 40px;
+        width: 40px;
+    }
+
+
+  @media screen and (max-width: 1366px) {
+    height: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    height: 20px;
+  }
+  @media screen and (max-width: 428px) {
+    height: 20px;
+  }
+  @media screen and (max-width: 360px) {
+    height: 20px;
+  }
+  }
 
     .react-multiple-carousel__arrow--right {
     right: 0;

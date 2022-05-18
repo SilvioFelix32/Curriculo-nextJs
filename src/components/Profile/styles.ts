@@ -6,9 +6,6 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 15px;
-  margin: auto;
-  background-color: var(--white);
-  outline: solid 1px var(--gray);
 `;
 
 export const Content = styled.div`
@@ -17,7 +14,7 @@ export const Content = styled.div`
 
   .name {
     padding-top: 15px;
-    color: var(--blue);
+    color: ${(props) => props.theme.colors.textTitle};
     font-size: 42px;
     font-weight: 600;
     text-align: center;
@@ -38,7 +35,7 @@ export const Content = styled.div`
   }
 
   .stack {
-    color: var(--gray);
+    color: ${(props) => props.theme.colors.textContent};
     font-size: 32px;
     font-weight: 600;
     font-family: 500;
@@ -68,6 +65,19 @@ export const Picture = styled.div`
   .image {
     border-radius: 100%;
     object-fit: cover;
+
+    @media screen and (max-width: 1366px) {
+      border-radius: 10%;
+    }
+    @media screen and (max-width: 768px) {
+      border-radius: 8%;
+    }
+    @media screen and (max-width: 428px) {
+      border-radius: 5%;
+    }
+    @media screen and (max-width: 360px) {
+      border-radius: 5%;
+    }
   }
 
   @media screen and (max-width: 1366px) {

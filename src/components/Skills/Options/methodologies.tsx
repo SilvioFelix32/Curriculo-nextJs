@@ -1,4 +1,4 @@
-import { SiWheniwork } from "react-icons/si";
+import { DailyIcon, PlanningIcon, RetrospectiveIcon } from "../../Icons";
 import { Card, Wrapper, Content, Icon } from "./styles";
 
 export function Methodologies() {
@@ -7,19 +7,19 @@ export function Methodologies() {
       <Card>
         <Content>Daily</Content>
         <Icon>
-          <SiWheniwork />
+          <DailyIcon />
         </Icon>
       </Card>
       <Card>
         <Content>Retrospective</Content>
         <Icon>
-          <SiWheniwork />
+          <RetrospectiveIcon />
         </Icon>
       </Card>
       <Card>
         <Content>Planning</Content>
         <Icon>
-          <SiWheniwork />
+          <PlanningIcon />
         </Icon>
       </Card>
     </Wrapper>

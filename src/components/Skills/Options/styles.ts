@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background-color: var(--blue-light);
   width: 100%;
 `;
 
@@ -15,7 +14,7 @@ export const Card = styled.div`
   display: flex;
   margin: 10px 20px;
   height: 60px;
-  background-color: var(--white);
+  background-color: ${(props) => props.theme.colors.secundary};
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: scale(1);
@@ -46,7 +45,7 @@ export const Content = styled.p`
   text-transform: uppercase;
   font-size: 22px;
   font-weight: 500;
-  color: var(--blue);
+  color: ${(props) => props.theme.colors.color};
   font-family: 500;
   padding: 0 15px;
   width: 100%;
@@ -72,7 +71,6 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: solid 2px var(--gray);
   border-radius: 0 8px 8px 0;
   background-color: gray;
 
@@ -80,8 +78,8 @@ export const Icon = styled.div`
     padding: 10px;
     height: 100%;
     width: 100%;
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.color};
     border-radius: 0 8px 8px 0;
   }
 

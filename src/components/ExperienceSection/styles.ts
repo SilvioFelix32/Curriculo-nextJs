@@ -20,7 +20,7 @@ export const Title = styled.h1`
   font-size: 42px;
   font-weight: 600;
   font-family: 500;
-  color: var(--blue);
+  color: ${(props) => props.theme.colors.textContent};
   margin-bottom: 15px;
 
   @media screen and (max-width: 1366px) {
@@ -41,7 +41,7 @@ export const Text = styled.p`
   font-size: 30px;
   font-weight: 300;
   font-family: 500;
-  color: var(--gray);
+  color: ${(props) => props.theme.colors.textContent};
   letter-spacing: 0.1rem;
   text-align: center;
   max-width: 1300px;
