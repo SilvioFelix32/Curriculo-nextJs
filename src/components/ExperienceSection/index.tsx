@@ -31,20 +31,19 @@ export function ExperienceSection() {
         ssr={true} // means to render carousel on server-side.
         showDots={true}
         infinite={true}
-        autoPlaySpeed={10000}
+        autoPlaySpeed={12000}
         keyBoardControl={true}
-        transitionDuration={1000}
+        transitionDuration={3000}
         removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         <Content>
           <Title>Minha História:</Title>
           <Text>
-            Desde Jovem, sempre tive uma paixão por
-            tecnologias, e por isso eu ansiava aprender mais, ansiava aprender
-            algo diferente.
+            Desde Jovem, sempre tive uma paixão por tecnologias, e por isso eu
+            ansiava aprender mais, ansiava aprender algo diferente.
           </Text>
           <Text>
-            E foi ai que aconteceu: aquela chama se ascendeu no momento que eu
+            E foi ai que aconteceu: aquela chama se acendeu no momento que eu
             cliquei em reproduzir no meu primeiro vídeo tutorial em JavaScript.
             <br /> O desenvolvimento web chama todas as minhas paixões: ele
             incorpora criatividade e solução de problemas...
@@ -65,18 +64,17 @@ export function ExperienceSection() {
         <Content>
           <Title>Experiência:</Title>
           <Text>
-            Analista Programador Jr - na empresa: SysMap Solutions. <br />{" "}
-            Período do emprego: 02/2022 - Momento atual.
+            Analista Full Stack Jr - na empresa: SysMap Solutions. <br />
+            Período: 02/2022 - Momento atual.
           </Text>
           <br />
           <Text>
             Junior Full Stack Developer - na empresa: Uni System Automação e
-            Tecnologia. <br /> Período do emprego: 11/2021 – 02/2022.
+            Tecnologia. <br /> Período: 11/2021 – 02/2022.
           </Text>
           <br />
           <Text>
-            Fullstack Developer - Autônomo <br /> Período: fev. de 2021 – nov.
-            de 2021.
+            Fullstack Developer - Autônomo <br /> Período: 02/2021 – 11/2021.
           </Text>
         </Content>
         <Content>

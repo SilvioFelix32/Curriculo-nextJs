@@ -6,107 +6,65 @@ export const Wrapper = styled.div`
   align-items: center;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  min-width: 54%;
-  min-height: 465px;
-
-  @media screen and (max-width: 1366px) {
-    min-width: 70%;
-    min-height: 220px;
-  }
-  @media screen and (max-width: 768px) {
-    min-width: 60%;
-    min-height: 220px;
-    margin: none;
-  }
-  @media screen and (max-width: 428px) {
-    min-width: 60%;
-    min-height: 220px;
-    margin: none;
-  }
-  @media screen and (max-width: 360px) {
-    min-width: 60%;
-    min-height: 220px;
-    margin: none;
-  }
+  padding: 15px 0;
 `;
 
 export const Title = styled.h1`
-  margin-top: 50px;
   font-size: 42px;
   font-weight: 600;
   font-family: 500;
   color: ${(props) => props.theme.colors.textTitle};
 
-  @media screen and (max-width: 1366px) {
-    margin-top: 20px;
-    font-size: 32px;
-  }
   @media screen and (max-width: 768px) {
-    margin-top: 20px;
     font-size: 28px;
   }
   @media screen and (max-width: 428px) {
-    margin-top: 20px;
     font-size: 26px;
   }
   @media screen and (max-width: 360px) {
-    margin-top: 20px;
     font-size: 22px;
   }
 `;
 
 export const Box = styled.div`
-  margin-top: 20px;
-  width: 100%;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 10px 0;
-
-  @media screen and (max-width: 1366px) {
-    margin-top: auto;
-  }
-  @media screen and (max-width: 768px) {
-    margin-top: auto;
-  }
-  @media screen and (max-width: 428px) {
-    margin-top: auto;
-  }
-  @media screen and (max-width: 360px) {
-    margin-top: auto;
-  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 15px;
 `;
 
 export const Text = styled.p`
   display: flex;
   flex-direction: row;
-  padding: 0 10px;
-  font-size: 32px;
+  padding: 0 12px;
+  font-size: 28px;
   font-weight: 300;
   font-family: 500;
   color: ${(props) => props.theme.colors.textTitle};
   letter-spacing: 0.1rem;
 
-  @media screen and (max-width: 1366px) {
-    font-size: 26px;
-    padding: 0 18px;
+  @media screen and (max-width: 1400px) {
+    font-size: 24px;
+    padding: 0 10px;
+    gap: 12px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 20px;
-    padding: 0 12px;
+    font-size: 16px;
+    padding: 0 10px;
+    gap: 10px;
   }
   @media screen and (max-width: 428px) {
     font-size: 14px;
     padding: 0 8px;
+    gap: 0;
   }
   @media screen and (max-width: 360px) {
     font-size: 12px;
     padding: 0 6px;
+    gap: 0;
   }
 
   &.title {
@@ -117,6 +75,17 @@ export const Text = styled.p`
 export const SocialMedia = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 15px;
+
+  @media screen and (max-width: 768px) {
+    gap: 12px;
+  }
+  @media screen and (max-width: 428px) {
+    gap: 10px;
+  }
+  @media screen and (max-width: 360px) {
+    gap: 0;
+  }
 `;
 
 export const HoverText = styled.div`
@@ -130,9 +99,6 @@ export const HoverText = styled.div`
   font-weight: 600;
   font-family: 500;
 
-  @media screen and (max-width: 1366px) {
-    font-size: 14px;
-  }
   @media screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -148,7 +114,6 @@ export const Button = styled.button`
   cursor: pointer;
   height: 62px;
   width: 62px;
-  padding: 7px;
   font-family: 500;
   background-color: ${(props) => props.theme.colors.primary};
   border: none;

@@ -21,6 +21,10 @@ export const Box = styled.div`
   width: 100%;
   padding: 20px 100px 0 100px;
 
+  @media screen and (max-width: 1366px) {
+    padding: 20px 50px 0 50px;
+  }
+
   @media screen and (max-width: 768px) {
     padding: 20px 20px 0 20px;
   }
@@ -34,23 +38,26 @@ export const Box = styled.div`
 
 export const TopBox = styled.div`
   padding-top: 10px;
-  width: 100%;
+  max-height: 550px;
   display: flex;
   justify-content: space-between;
   background-color: ${(props) => props.theme.colors.primary};
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1276px) {
     padding-top: 28px;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
   }
   @media screen and (max-width: 428px) {
     padding-top: 26px;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
   }
   @media screen and (max-width: 360px) {
     padding-top: 20px;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
   }
