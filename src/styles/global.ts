@@ -49,10 +49,6 @@ export const GlobalStyles = createGlobalStyle`
         width: 100%;
     }
 
-
-  @media screen and (max-width: 1366px) {
-    height: 20px;
-  }
   @media screen and (max-width: 768px) {
     height: 20px;
   }

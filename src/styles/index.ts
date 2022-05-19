@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100vw;
   height: 100%;
   background-color: ${(props) => props.theme.colors.primary};
 `;
@@ -22,9 +21,6 @@ export const Box = styled.div`
   width: 100%;
   padding: 20px 100px 0 100px;
 
-  @media screen and (max-width: 1400px) {
-    padding: 20px 20px 0 20px;
-  }
   @media screen and (max-width: 768px) {
     padding: 20px 20px 0 20px;
   }
@@ -43,11 +39,6 @@ export const TopBox = styled.div`
   justify-content: space-between;
   background-color: ${(props) => props.theme.colors.primary};
 
-  @media screen and (max-width: 1400px) {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-  }
   @media screen and (max-width: 768px) {
     padding-top: 28px;
     display: flex;
