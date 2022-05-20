@@ -8,7 +8,7 @@ import { SwitchToggle } from "../components/ChangeTheme";
 import { Skills } from "../components/Skills";
 //styles
 import { ThemeProvider } from "styled-components";
-import { Wrapper, Box, TopBox, Content } from "../styles";
+import { Wrapper, Box, TopBox, Content, Header } from "../styles";
 import light from "../styles/themes/light";
 import dark from "../styles/themes/dark";
 
@@ -24,7 +24,9 @@ const Home: NextPage = () => {
       <Wrapper>
         <Content>
           <Box>
-            <SwitchToggle toggleTheme={toggleTheme} />
+            <Header>
+              Tema: <SwitchToggle toggleTheme={toggleTheme} />
+            </Header>
             <TopBox>
               <Profile />
               <PersonalData />

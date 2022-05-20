@@ -36,16 +36,6 @@ export const Context = styled.div`
 export const Content = styled.div`
   display: flex;
   overflow-x: auto;
-
-  @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
-  }
-  @media screen and (max-width: 428px) {
-    flex-wrap: wrap;
-  }
-  @media screen and (max-width: 360px) {
-    flex-wrap: wrap;
-  }
 `;
 
 export const Selector = styled.button`
@@ -74,11 +64,14 @@ export const Selector = styled.button`
   }
   @media screen and (max-width: 768px) {
     font-size: 16px;
+    min-width: 120px;
   }
   @media screen and (max-width: 428px) {
     font-size: 14px;
+    min-width: 120px;
   }
   @media screen and (max-width: 360px) {
     font-size: 12px;
+    min-width: 120px;
   }
 `;

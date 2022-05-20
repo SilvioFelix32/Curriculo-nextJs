@@ -7,6 +7,13 @@ export const Wrapper = styled.div`
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 15px 0;
+
+  @media screen and (max-width: 428px) {
+    margin-top: 12px;
+  }
+  @media screen and (max-width: 360px) {
+    margin-top: 10px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -110,13 +117,18 @@ export const HoverText = styled.div`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ actualWiggle: boolean }>`
   cursor: pointer;
-  height: 62px;
-  width: 62px;
+  height: 48px;
+  width: 48px;
+  margin-right: 4px;
   font-family: 500;
   background-color: ${(props) => props.theme.colors.primary};
   border: none;
+  animation-name: wiggle;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: ${(props) => props.actualWiggle && "3s"};
 
   svg {
     height: 100%;
@@ -128,29 +140,28 @@ export const Button = styled.button`
       color: ${(props) => props.theme.colors.secundary};
       fill: ${(props) => props.theme.colors.background};
       transform: scale(1.2);
-      animation: wiggle 2s linear infinite;
     }
 
     /* Keyframes */
     @keyframes wiggle {
       0%,
       7% {
-        transform: rotateZ(0) scale(1.2);
+        transform: rotateZ(0) scale(1);
       }
       15% {
-        transform: rotateZ(-15deg) scale(1.2);
+        transform: rotateZ(-15deg) scale(1);
       }
       20% {
-        transform: rotateZ(10deg) scale(1.2);
+        transform: rotateZ(10deg) scale(1);
       }
       25% {
-        transform: rotateZ(-10deg) scale(1.2);
+        transform: rotateZ(-10deg) scale(1);
       }
       30% {
-        transform: rotateZ(6deg) scale(1.2);
+        transform: rotateZ(6deg) scale(1);
       }
       35% {
-        transform: rotateZ(-4deg) scale(1.2);
+        transform: rotateZ(-4deg) scale(1);
       }
       40%,
       100% {
@@ -160,8 +171,8 @@ export const Button = styled.button`
   }
 
   @media screen and (max-width: 1366px) {
-    height: 48px;
-    width: 48px;
+    height: 46px;
+    width: 46px;
     padding: 3px;
   }
   @media screen and (max-width: 768px) {

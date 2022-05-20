@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Popup } from "semantic-ui-react";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
@@ -15,6 +15,19 @@ import {
 } from "./styles";
 
 export function PersonalData() {
+  const [actualWiggle, setActualWiggle] = useState(0);
+
+  function wiggleTimer() {
+    setTimeout(() => {
+      if (actualWiggle === 3) {
+        return setActualWiggle(0);
+      }
+      setActualWiggle(actualWiggle + 1);
+    }, 3000);
+  }
+
+  wiggleTimer();
+
   return (
     <Wrapper>
       <Title>Sobre Mim</Title>
@@ -47,7 +60,8 @@ export function PersonalData() {
             offset={[0, 10]}
             trigger={
               <Button
-                className="pdf"
+                actualWiggle={actualWiggle === 0}
+                className="wiggle"
                 onClick={() => window.open("/documents/curriculo.pdf")}
               >
                 <FaFileDownload />
@@ -55,11 +69,15 @@ export function PersonalData() {
             }
           />
           <Button
+            actualWiggle={actualWiggle === 1}
+            className="wiggle"
             onClick={() => window.open("https://github.com/SilvioFelix32")}
           >
             <FaGithubSquare />
           </Button>
           <Button
+            actualWiggle={actualWiggle === 2}
+            className="wiggle"
             onClick={() =>
               window.open("https://www.linkedin.com/in/silviofelix32/")
             }
@@ -67,6 +85,8 @@ export function PersonalData() {
             <FaLinkedin />
           </Button>
           <Button
+            actualWiggle={actualWiggle === 3}
+            className="wiggle"
             onClick={() =>
               window.open("https://api.whatsapp.com/send?phone=5528999002593")
             }

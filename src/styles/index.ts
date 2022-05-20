@@ -15,6 +15,18 @@ export const Content = styled.div`
   }
 `;
 
+export const Header = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 500;
+  color: ${(props) => props.theme.colors.textTitle};
+`;
+
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
