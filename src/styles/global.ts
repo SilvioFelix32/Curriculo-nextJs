@@ -62,9 +62,34 @@ export const GlobalStyles = createGlobalStyle`
 
     .react-multiple-carousel__arrow--right {
     right: 0;
+    @media screen and (max-width: 768px) {
+      min-width: 30px;
+    min-height: 30px;
+  }
+  @media screen and (max-width: 428px) {
+    min-width: 30px;
+    min-height: 30px;
+  }
+  @media screen and (max-width: 360px) {
+    min-width: 20px;
+    min-height: 20px;
+  }
+    
   }
 
   .react-multiple-carousel__arrow--left {
     left: 0;
+    @media screen and (max-width: 768px) {
+      min-width: 30px;
+    min-height: 30px;
+  }
+  @media screen and (max-width: 428px) {
+    min-width: 30px;
+    min-height: 30px;
+  }
+  @media screen and (max-width: 360px) {
+    min-width: 20px;
+    min-height: 20px;
+  }
   }
 `;

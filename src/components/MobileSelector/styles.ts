@@ -1,51 +1,28 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  display: flex;
+  width: 98%;
+  display: none;
   flex-direction: column;
-  width: 100%;
+  border-radius: 10px;
+  margin: 15px auto;
+  padding: 20px;
 
   @media screen and (max-width: 768px) {
-    display: none;
+    display: flex;
   }
   @media screen and (max-width: 428px) {
-    display: none;
+    display: flex;
   }
   @media screen and (max-width: 360px) {
-    display: none;
+    display: flex;
   }
-`;
-
-export const Title = styled.h1`
-  margin: 50px 0 20px 0;
-  text-align: center;
-  font-size: 38px;
-  font-weight: 600;
-  font-family: 500;
-  color: ${(props) => props.theme.colors.textTitle};
-
-  @media screen and (max-width: 1366px) {
-    font-size: 26px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 22px;
-  }
-  @media screen and (max-width: 428px) {
-    font-size: 20px;
-  }
-  @media screen and (max-width: 360px) {
-    font-size: 18px;
-  }
-`;
-
-export const Context = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 export const Content = styled.div`
   display: flex;
-  overflow-x: auto;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const Selector = styled.button`
