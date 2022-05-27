@@ -11,7 +11,6 @@ import { ThemeProvider } from "styled-components";
 import { Wrapper, Box, TopBox, Content, Header } from "../styles";
 import light from "../styles/themes/light";
 import dark from "../styles/themes/dark";
-import { MobileSelector } from "../components/MobileSelector";
 
 const Home: NextPage = () => {
   const [theme, setTheme] = useState(light);
@@ -36,7 +35,6 @@ const Home: NextPage = () => {
           </Box>
           <ExperienceSection />
           <Skills />
-          <MobileSelector />
         </Content>
       </Wrapper>
     </ThemeProvider>

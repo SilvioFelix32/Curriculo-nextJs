@@ -4,16 +4,6 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-  @media screen and (max-width: 428px) {
-    display: none;
-  }
-  @media screen and (max-width: 360px) {
-    display: none;
-  }
 `;
 
 export const Title = styled.h1`
