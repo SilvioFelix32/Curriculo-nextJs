@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "target": "es2020",
+    "engines": {
+         "node": "18.18.0"
+      },
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
