@@ -1,5 +1,5 @@
 {
-  "name": "curriculo-interativo",
+  "name": "curriculo-sftech",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,25 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/node": "20.6.2",
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.5.1",
     "js-cookie": "^3.0.5",
-    "next": "12.1.5",
+    "next": "13.5.1",
     "next-images": "^1.8.5",
-    "polished": "^4.2.2",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-icons": "^4.3.1",
-    "react-multi-carousel": "^2.8.0",
-    "semantic-ui-react": "^2.1.2",
-    "styled-components": "^5.3.5"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-multi-carousel": "^2.8.4",
+    "semantic-ui-react": "^2.1.4",
+    "styled-components": "^6.0.8",
+    "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/node": "17.0.27",
-    "@types/react": "18.0.7",
-    "@types/react-dom": "18.0.0",
     "@types/styled-components": "^5.1.27",
-    "babel-plugin-styled-components": "^2.1.4",
-    "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
-    "typescript": "4.6.3"
+    "babel-plugin-styled-components": "^2.1.4"
   }
 }
