@@ -4,9 +4,7 @@ import { ThemeContext } from "../../context/Theme";
 //styles
 import { StyledButton } from "./styled";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
-
-export const ThemeToggle: React.FC<ButtonProps> = ({ ...rest }) => {
+export function ThemeToggle(): JSX.Element {
   const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
   const { setTheme } = useContext(ThemeContext);
 
@@ -17,8 +15,8 @@ export const ThemeToggle: React.FC<ButtonProps> = ({ ...rest }) => {
   }
 
   return (
-    <StyledButton {...rest} onClick={toggleTheme}>
+    <StyledButton onClick={toggleTheme}>
       {isDarkModeEnabled ? <MdOutlineLightMode /> : <MdDarkMode />}
     </StyledButton>
   );
-};
+}
