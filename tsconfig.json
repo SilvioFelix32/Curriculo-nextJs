@@ -15,7 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "files": ["src/styles/styled.d.ts"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/imageproxy.js"],
   "exclude": ["node_modules"]
 }

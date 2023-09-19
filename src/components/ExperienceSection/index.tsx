@@ -65,7 +65,7 @@ export function ExperienceSection() {
           <Title>Experiência:</Title>
           <Text>
             Analista Full Stack Jr - na empresa: SysMap Solutions. <br />
-            Período: 02/2022 - Momento atual.
+            Período: 02/2022 - 05/2022.
           </Text>
           <br />
           <Text>
@@ -90,6 +90,15 @@ export function ExperienceSection() {
           <Text>
             Rocketseat - Ignite - Programa de aceleração de carreira full-stack
           </Text>
+          <br />
+          <Text>
+            Udemy - TypeScript do básico ao avançado (c/ React, Express)
+          </Text>
+          <br />
+          <Text>
+            Udemy - Docker para Desenvolvedores (com Docker Swarm e Kubernetes)
+          </Text>
+          <br />
         </Content>
       </Carousel>
     </Wrapper>

@@ -1,32 +1,23 @@
-import type { NextPage } from "next";
-import React, { useState } from "react";
+import React from "react";
 //components
-import { Profile } from "../components/Profile";
-import { PersonalData } from "../components/PersonalData";
-import { ExperienceSection } from "../components/ExperienceSection";
-import { SwitchToggle } from "../components/ChangeTheme";
-import { Skills } from "../components/Skills";
+import {
+  ThemeToggle,
+  Profile,
+  PersonalData,
+  ExperienceSection,
+  Skills,
+} from "../components";
 //styles
-import { ThemeProvider } from "styled-components";
-import { Wrapper, Box, TopBox, Content, Header } from "../styles";
-import light from "../styles/themes/light";
-import dark from "../styles/themes/dark";
+import { Wrapper, Box, TopBox, Content, Header, Theme } from "../styles";
 
-const Home: NextPage = () => {
-  const [theme, setTheme] = useState(light);
-  const [device, setDevice] = useState("");
-
-  function toggleTheme() {
-    setTheme(theme.title === "light" ? dark : light);
-  }
-
+export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
+    <Theme>
       <Wrapper>
         <Content>
           <Box>
             <Header>
-              Tema: <SwitchToggle toggleTheme={toggleTheme} />
+              Tema: <ThemeToggle />
             </Header>
             <TopBox>
               <Profile />
@@ -37,8 +28,6 @@ const Home: NextPage = () => {
           <Skills />
         </Content>
       </Wrapper>
-    </ThemeProvider>
+    </Theme>
   );
-};
-
-export default Home;
+}

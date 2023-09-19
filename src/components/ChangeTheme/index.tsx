@@ -1,27 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
-import Switch from "react-switch";
-import { shade } from "polished";
-import { ThemeContext } from "styled-components";
+import { ThemeContext } from "../../context/Theme";
 //styles
-import { Wrapper } from "./styled";
+import { StyledButton } from "./styled";
 
-export function SwitchToggle({ toggleTheme }) {
-  const { colors, title } = useContext(ThemeContext);
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+
+export const ThemeToggle: React.FC<ButtonProps> = ({ ...rest }) => {
+  const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
+  const { setTheme } = useContext(ThemeContext);
+
+  function toggleTheme() {
+    const newTheme = isDarkModeEnabled ? "light" : "dark";
+    setIsDarkModeEnabled(!isDarkModeEnabled);
+    setTheme(newTheme);
+  }
 
   return (
-    <Wrapper>
-      <Switch
-        onChange={toggleTheme}
-        checked={title === "dark"}
-        checkedIcon={false}
-        uncheckedIcon={false}
-        offColor={shade(0.15, colors.secundary)}
-        onColor="#A1A1A1"
-        uncheckedHandleIcon={<MdDarkMode />}
-        checkedHandleIcon={<MdOutlineLightMode />}
-        className="handler"
-      />
-    </Wrapper>
+    <StyledButton {...rest} onClick={toggleTheme}>
+      {isDarkModeEnabled ? <MdOutlineLightMode /> : <MdDarkMode />}
+    </StyledButton>
   );
-}
+};

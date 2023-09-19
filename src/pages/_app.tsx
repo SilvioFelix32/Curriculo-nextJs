@@ -1,26 +1,48 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
-import type { AppProps } from "next/app";
-import usePersistedState from "../utils/usePersistedState";
+import { GetServerSideProps } from "next";
+import ThemePreferenceProvider from "../context/Theme";
+import Cookies from "js-cookie";
+import { MainApp } from "../components/MainApp";
 //styles
-import { ThemeProvider, DefaultTheme } from "styled-components";
 import { GlobalStyles } from "../styles/global";
-import light from "../styles/themes/light";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState<DefaultTheme>(light);
+interface AppProps {
+  Component: React.ComponentType<any>;
+  pageProps: AppProps;
+}
+
+export default function App({ Component, pageProps }: AppProps) {
+  const setDefaultColorTheme = () => {
+    const favoriteTheme = Cookies.get("color-theme");
+
+    if (!favoriteTheme) {
+      Cookies.set("color-theme", "light", {
+        expires: 30,
+        path: "/",
+      });
+    }
+  };
+
+  setDefaultColorTheme();
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemePreferenceProvider>
       <Head>
         <title>Sf-tech</title>
         <link rel="shortcut icon" href="/favicon.jpg" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Component {...pageProps} />
-      <GlobalStyles />
-    </ThemeProvider>
+      <MainApp>
+        <Component {...pageProps} />
+        <GlobalStyles />
+      </MainApp>
+    </ThemePreferenceProvider>
   );
 }
 
-export default MyApp;
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {},
+  };
+};

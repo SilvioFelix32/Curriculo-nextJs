@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Popup } from "semantic-ui-react";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
@@ -17,16 +17,40 @@ import {
 export function PersonalData() {
   const [actualWiggle, setActualWiggle] = useState(0);
 
-  function wiggleTimer() {
-    setTimeout(() => {
-      if (actualWiggle === 3) {
-        return setActualWiggle(0);
-      }
-      setActualWiggle(actualWiggle + 1);
+  useEffect(() => {
+    const wiggleTimer = setInterval(() => {
+      setActualWiggle((prevWiggle) => (prevWiggle + 1) % 4);
     }, 3000);
+
+    return () => clearInterval(wiggleTimer);
+  }, []);
+
+  function calculateAge(dateOfBirth) {
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1;
+    const currentDay = currentDate.getDate();
+
+    const birthDateArray = dateOfBirth.split("-");
+    const birthYear = parseInt(birthDateArray[0]);
+    const birthMonth = parseInt(birthDateArray[1]);
+    const birthDay = parseInt(birthDateArray[2]);
+
+    let age = currentYear - birthYear;
+
+    if (
+      currentMonth < birthMonth ||
+      (currentMonth === birthMonth && currentDay < birthDay)
+    ) {
+      age--;
+    }
+
+    return age;
   }
 
-  wiggleTimer();
+  // Example of usage:
+  const dateOfBirth = "1997-05-01";
+  const age = calculateAge(dateOfBirth);
 
   return (
     <Wrapper>
@@ -38,7 +62,7 @@ export function PersonalData() {
             Félix
           </Text>
           <Text>
-            <Text className="title">Idade:</Text> 25 anos
+            <Text className="title">Idade:</Text> {age} anos
           </Text>
           <Text>
             <Text className="title">Cidade:</Text> Piúma
@@ -67,7 +91,7 @@ export function PersonalData() {
                 <FaFileDownload />
               </Button>
             }
-          />
+          ></Popup>
           <Button
             actualWiggle={actualWiggle === 1}
             className="wiggle"

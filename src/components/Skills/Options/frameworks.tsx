@@ -3,7 +3,6 @@ import {
   SiSass,
   SiTailwindcss,
   SiChakraui,
-  SiMaterialui,
 } from "react-icons/si";
 import { Card, Wrapper, Content, Icon } from "./styles";
 
@@ -32,12 +31,6 @@ export function Frameworks() {
         <Content>chakra-ui</Content>
         <Icon>
           <SiChakraui />
-        </Icon>
-      </Card>
-      <Card>
-        <Content>material-ui</Content>
-        <Icon>
-          <SiMaterialui />
         </Icon>
       </Card>
     </Wrapper>

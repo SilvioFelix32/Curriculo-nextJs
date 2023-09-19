@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Theme = styled.div`
+  height: 100%;
+  background: ${({ theme }) => theme.colors.background};
+`;
+
 export const Wrapper = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.colors.primary};
@@ -18,7 +23,9 @@ export const Content = styled.div`
 export const Header = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
+  height: 50px;
   gap: 10px;
 
   font-size: 18px;
