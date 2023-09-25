@@ -17,4 +17,8 @@ export const StyledButton = styled.button`
       filter: brightness(0.9);
     }
   }
+
+  @media screen and (max-width: 768px) {
+    margin-right: 22px;
+  }
 `;

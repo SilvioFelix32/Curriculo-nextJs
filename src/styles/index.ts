@@ -25,10 +25,9 @@ export const Header = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 50px;
-  gap: 10px;
+  margin-bottom: 15px;
 
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: bold;
   font-family: 500;
   color: ${(props) => props.theme.colors.textTitle};

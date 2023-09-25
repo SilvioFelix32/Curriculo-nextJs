@@ -13,46 +13,22 @@ export const Content = styled.div`
   flex-direction: column;
 
   .name {
-    padding-top: 15px;
+    padding-top: 10px;
     color: ${(props) => props.theme.colors.textTitle};
-    font-size: 42px;
+    font-size: 2rem;
     font-weight: 600;
     text-align: center;
-    font-family: 500;
 
-    @media screen and (max-width: 1366px) {
-      font-size: 38px;
-    }
     @media screen and (max-width: 768px) {
-      font-size: 36px;
-    }
-    @media screen and (max-width: 428px) {
-      font-size: 32px;
-    }
-    @media screen and (max-width: 360px) {
-      font-size: 28px;
+      margin-top: 30px;
     }
   }
 
   .stack {
     color: ${(props) => props.theme.colors.textContent};
-    font-size: 32px;
+    font-size: 1.6rem;
     font-weight: 600;
-    font-family: 500;
     text-align: center;
-
-    @media screen and (max-width: 1366px) {
-      font-size: 30px;
-    }
-    @media screen and (max-width: 768px) {
-      font-size: 28px;
-    }
-    @media screen and (max-width: 428px) {
-      font-size: 26px;
-    }
-    @media screen and (max-width: 360px) {
-      font-size: 24px;
-    }
   }
 `;
 
@@ -63,21 +39,8 @@ export const Picture = styled.div`
   align-items: center;
 
   .image {
-    border-radius: 100%;
+    border-radius: 50%;
     object-fit: cover;
-
-    @media screen and (max-width: 1366px) {
-      border-radius: 10%;
-    }
-    @media screen and (max-width: 768px) {
-      border-radius: 8%;
-    }
-    @media screen and (max-width: 428px) {
-      border-radius: 5%;
-    }
-    @media screen and (max-width: 360px) {
-      border-radius: 5%;
-    }
   }
 
   @media screen and (max-width: 1366px) {
@@ -89,11 +52,18 @@ export const Picture = styled.div`
     height: 300px;
   }
   @media screen and (max-width: 428px) {
-    width: 280px;
     height: 280px;
+
+    .image {
+      border-radius: 8px;
+    }
   }
   @media screen and (max-width: 360px) {
-    width: 250px;
     height: 250px;
+
+    .image {
+      margin-top: 20px;
+      border-radius: 8px;
+    }
   }
 `;
