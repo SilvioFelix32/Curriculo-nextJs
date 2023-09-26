@@ -2,7 +2,6 @@ import {
   SiNodedotjs,
   SiExpress,
   SiNestjs,
-  SiDocker,
   SiPostgresql,
   SiMysql,
   SiMongodb,
@@ -20,7 +19,7 @@ export function BackEnd() {
         </Icon>
       </Card>
       <Card>
-        <Content>expressjs</Content>
+        <Content>express</Content>
         <Icon>
           <SiExpress />
         </Icon>
@@ -32,7 +31,7 @@ export function BackEnd() {
         </Icon>
       </Card>
       <Card>
-        <Content>postgress</Content>
+        <Content>postgressql</Content>
         <Icon>
           <SiPostgresql />
         </Icon>
@@ -44,19 +43,13 @@ export function BackEnd() {
         </Icon>
       </Card>
       <Card>
-        <Content>docker</Content>
-        <Icon>
-          <SiDocker />
-        </Icon>
-      </Card>
-      <Card>
         <Content>mongodb</Content>
         <Icon>
           <SiMongodb />
         </Icon>
       </Card>
       <Card>
-        <Content>prisma</Content>
+        <Content>prismaorm</Content>
         <Icon>
           <SiPrisma />
         </Icon>

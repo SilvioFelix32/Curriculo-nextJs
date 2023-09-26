@@ -3,12 +3,20 @@ import {
   SiSass,
   SiTailwindcss,
   SiChakraui,
+  SiDocker,
+  SiAxios,
 } from "react-icons/si";
 import { Card, Wrapper, Content, Icon } from "./styles";
 
 export function Frameworks() {
   return (
     <Wrapper>
+      <Card>
+        <Content>docker</Content>
+        <Icon>
+          <SiDocker />
+        </Icon>
+      </Card>
       <Card>
         <Content> styled-components</Content>
         <Icon>
@@ -31,6 +39,12 @@ export function Frameworks() {
         <Content>chakra-ui</Content>
         <Icon>
           <SiChakraui />
+        </Icon>
+      </Card>
+      <Card>
+        <Content>Axios</Content>
+        <Icon>
+          <SiAxios />
         </Icon>
       </Card>
     </Wrapper>
