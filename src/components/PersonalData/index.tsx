@@ -48,7 +48,6 @@ export function PersonalData() {
     return age;
   }
 
-  // Example of usage:
   const dateOfBirth = "1997-05-01";
   const age = calculateAge(dateOfBirth);
 
