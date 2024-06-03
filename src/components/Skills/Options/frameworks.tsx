@@ -15,19 +15,19 @@ export function Frameworks() {
   return (
     <Wrapper>
       <Card>
-        <Content>lambda</Content>
+        <Content>awslambda</Content>
         <Icon>
           <SiAwslambda />
         </Icon>
       </Card>
       <Card>
-        <Content>apigateway</Content>
+        <Content>awsapigateway</Content>
         <Icon>
           <SiAmazonapigateway />
         </Icon>
       </Card>
       <Card>
-        <Content>Cognito</Content>
+        <Content>awsCognito</Content>
         <Icon>
           <SiAmazon />
         </Icon>

@@ -2,7 +2,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Wrapper, Content, Title, Text } from "./styles";
 import { experiences } from "./experiences";
-import { useState } from "react";
 
 const responsive = {
   superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 1 },
@@ -19,10 +18,13 @@ export function ExperienceSection() {
         ssr={true}
         showDots={true}
         infinite={true}
+        autoPlay={true}
         autoPlaySpeed={12000}
         keyBoardControl={true}
-        transitionDuration={3000}
+        transitionDuration={500}
         removeArrowOnDeviceType={["tablet", "mobile"]}
+        arrows={true}
+        customTransition="all 0.5s ease"
       >
         {experiences.map((experience, index) => (
           <Content key={index}>

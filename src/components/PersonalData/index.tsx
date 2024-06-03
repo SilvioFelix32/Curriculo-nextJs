@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Popup } from "semantic-ui-react";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
-//styles
+// styles
 import {
   Content,
   Wrapper,
@@ -83,7 +83,7 @@ export function PersonalData() {
             offset={[0, 10]}
             trigger={
               <Button
-                actualWiggle={actualWiggle === 0}
+                $actualWiggle={actualWiggle === 0}
                 className="wiggle"
                 onClick={() => window.open("/documents/curriculo.pdf")}
               >
@@ -92,14 +92,14 @@ export function PersonalData() {
             }
           ></Popup>
           <Button
-            actualWiggle={actualWiggle === 1}
+            $actualWiggle={actualWiggle === 1}
             className="wiggle"
             onClick={() => window.open("https://github.com/SilvioFelix32")}
           >
             <FaGithubSquare />
           </Button>
           <Button
-            actualWiggle={actualWiggle === 2}
+            $actualWiggle={actualWiggle === 2}
             className="wiggle"
             onClick={() =>
               window.open("https://www.linkedin.com/in/silviofelix32/")
@@ -108,7 +108,7 @@ export function PersonalData() {
             <FaLinkedin />
           </Button>
           <Button
-            actualWiggle={actualWiggle === 3}
+            $actualWiggle={actualWiggle === 3}
             className="wiggle"
             onClick={() =>
               window.open("https://api.whatsapp.com/send?phone=5528999002593")

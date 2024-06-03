@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -117,7 +117,12 @@ export const HoverText = styled.div`
   }
 `;
 
-export const Button = styled.button<{ actualWiggle: boolean }>`
+const wiggle = keyframes`
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+`;
+
+export const Button = styled.button<{ $actualWiggle: boolean }>`
   cursor: pointer;
   height: 48px;
   width: 48px;
@@ -125,10 +130,10 @@ export const Button = styled.button<{ actualWiggle: boolean }>`
   font-family: 500;
   background-color: ${(props) => props.theme.colors.primary};
   border: none;
-  animation-name: wiggle;
+  animation-name: ${wiggle};
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-duration: ${(props) => props.actualWiggle && "3s"};
+  animation-duration: ${(props) => props.$actualWiggle && "3s"};
 
   svg {
     height: 100%;
