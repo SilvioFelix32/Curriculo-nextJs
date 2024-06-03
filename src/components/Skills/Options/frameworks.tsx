@@ -15,13 +15,13 @@ export function Frameworks() {
   return (
     <Wrapper>
       <Card>
-        <Content>lamda</Content>
+        <Content>lambda</Content>
         <Icon>
           <SiAwslambda />
         </Icon>
       </Card>
       <Card>
-        <Content>lamda</Content>
+        <Content>apigateway</Content>
         <Icon>
           <SiAmazonapigateway />
         </Icon>
