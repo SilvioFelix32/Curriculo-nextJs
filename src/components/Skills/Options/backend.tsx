@@ -6,6 +6,7 @@ import {
   SiMysql,
   SiMongodb,
   SiPrisma,
+  SiAmazondynamodb,
 } from "react-icons/si";
 import { Card, Wrapper, Content, Icon } from "./styles";
 
@@ -46,6 +47,12 @@ export function BackEnd() {
         <Content>mongodb</Content>
         <Icon>
           <SiMongodb />
+        </Icon>
+      </Card>
+      <Card>
+        <Content>dynamoDB</Content>
+        <Icon>
+          <SiAmazondynamodb />
         </Icon>
       </Card>
       <Card>

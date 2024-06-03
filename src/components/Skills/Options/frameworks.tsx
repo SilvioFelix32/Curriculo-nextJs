@@ -5,12 +5,33 @@ import {
   SiChakraui,
   SiDocker,
   SiAxios,
+  SiAwslambda,
+  SiAmazonapigateway,
+  SiAmazon,
 } from "react-icons/si";
 import { Card, Wrapper, Content, Icon } from "./styles";
 
 export function Frameworks() {
   return (
     <Wrapper>
+      <Card>
+        <Content>lamda</Content>
+        <Icon>
+          <SiAwslambda />
+        </Icon>
+      </Card>
+      <Card>
+        <Content>lamda</Content>
+        <Icon>
+          <SiAmazonapigateway />
+        </Icon>
+      </Card>
+      <Card>
+        <Content>Cognito</Content>
+        <Icon>
+          <SiAmazon />
+        </Icon>
+      </Card>
       <Card>
         <Content>docker</Content>
         <Icon>

@@ -18,8 +18,9 @@ export const experiences = [
   {
     title: "Experiência:",
     text: [
-      "Analista Full Stack Jr - Empresa: SysMap Solutions. Período: 02/2022 - 05/2022.",
-      "Junior Full Stack Developer - Empresa: Uni System Automação e Tecnologia. Período: 11/2021 – 02/2022.",
+      "Analista Full Stack - Empresa: SysMap Solutions. Período: 12/2023 - Atualmente",
+      "Analista Full Stack- Empresa: SysMap Solutions. Período: 02/2022 - 05/2022.",
+      "Full Stack Developer - Empresa: Uni System Automação e Tecnologia. Período: 11/2021 – 02/2022.",
       "Fullstack Developer - Autônomo. Período: 02/2021 – 11/2021.",
     ],
   },
@@ -31,6 +32,7 @@ export const experiences = [
       "Rocketseat - Ignite - Programa de aceleração de carreira full-stack",
       "Udemy - TypeScript do básico ao avançado (c/ React, Express)",
       "Udemy - Docker para Desenvolvedores (com Docker Swarm e Kubernetes)",
+      "Udemy - AWS Lambda & Serverless - (Amazon Cognito|Lambda|ApiGateWay|DynamoDB)",
     ],
   },
 ];
