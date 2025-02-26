@@ -2,11 +2,8 @@ import {
   SiNodedotjs,
   SiExpress,
   SiNestjs,
-  SiPostgresql,
-  SiMysql,
-  SiMongodb,
   SiPrisma,
-  SiAmazondynamodb,
+  SiTypeorm,
 } from "react-icons/si";
 import { Card, Wrapper, Content, Icon } from "./styles";
 
@@ -14,7 +11,7 @@ export function BackEnd() {
   return (
     <Wrapper>
       <Card>
-        <Content>nodejs</Content>
+        <Content>node.js</Content>
         <Icon>
           <SiNodedotjs />
         </Icon>
@@ -26,39 +23,27 @@ export function BackEnd() {
         </Icon>
       </Card>
       <Card>
-        <Content>nestjs</Content>
+        <Content>fastify</Content>
         <Icon>
           <SiNestjs />
         </Icon>
       </Card>
       <Card>
-        <Content>postgressql</Content>
+        <Content>nest.js</Content>
         <Icon>
-          <SiPostgresql />
-        </Icon>
-      </Card>
-      <Card>
-        <Content>mysql</Content>
-        <Icon>
-          <SiMysql />
-        </Icon>
-      </Card>
-      <Card>
-        <Content>mongodb</Content>
-        <Icon>
-          <SiMongodb />
-        </Icon>
-      </Card>
-      <Card>
-        <Content>dynamoDB</Content>
-        <Icon>
-          <SiAmazondynamodb />
+          <SiNestjs />
         </Icon>
       </Card>
       <Card>
         <Content>prismaorm</Content>
         <Icon>
           <SiPrisma />
+        </Icon>
+      </Card>
+      <Card>
+        <Content>typeorm</Content>
+        <Icon>
+          <SiTypeorm />
         </Icon>
       </Card>
     </Wrapper>

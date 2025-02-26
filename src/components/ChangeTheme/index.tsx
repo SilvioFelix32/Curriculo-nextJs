@@ -4,7 +4,7 @@ import { ThemeContext } from "../../context/Theme";
 //styles
 import { StyledButton } from "./styled";
 
-export function ThemeToggle(): JSX.Element {
+export const ThemeToggle: React.FC = () => {
   const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(false);
   const { setTheme } = useContext(ThemeContext);
 
@@ -19,4 +19,4 @@ export function ThemeToggle(): JSX.Element {
       {isDarkModeEnabled ? <MdOutlineLightMode /> : <MdDarkMode />}
     </StyledButton>
   );
-}
+};

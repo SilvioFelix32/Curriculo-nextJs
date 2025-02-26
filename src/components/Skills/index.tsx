@@ -7,6 +7,7 @@ import {
   Lang,
   Methodologies,
   Others,
+  Databases,
 } from "./Options";
 import { Content, Context, Selector, Wrapper, Title } from "./styles";
 
@@ -37,6 +38,12 @@ export function Skills() {
             Back-end
           </Selector>
           <Selector
+            className={nextSkill === "DATABASES" ? "selected" : ""}
+            onClick={() => setNextSkill("DATABASES")}
+          >
+            Banco de Dados
+          </Selector>
+          <Selector
             className={nextSkill === "TECNOLOGIES" ? "selected" : ""}
             onClick={() => setNextSkill("TECNOLOGIES")}
           >
@@ -65,6 +72,7 @@ export function Skills() {
           {nextSkill === "LANGUAGES" && <Languages />}
           {nextSkill === "FRONT-END" && <FrontEnd />}
           {nextSkill === "BACK-END" && <BackEnd />}
+          {nextSkill === "DATABASES" && <Databases />}
           {nextSkill === "TECNOLOGIES" && <Frameworks />}
           {nextSkill === "LANG" && <Lang />}
           {nextSkill === "METODOLOGIES" && <Methodologies />}

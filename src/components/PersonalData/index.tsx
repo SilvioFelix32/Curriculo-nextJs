@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Popup } from "semantic-ui-react";
+import Tooltip from "@mui/material/Tooltip";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 // styles
@@ -12,6 +12,7 @@ import {
   SocialMedia,
   Button,
   HoverText,
+  TextTitle,
 } from "./styles";
 
 export function PersonalData() {
@@ -56,41 +57,36 @@ export function PersonalData() {
       <Title>Sobre Mim</Title>
       <Box>
         <Content>
-          <Text>
+          <TextTitle>
             <Text className="title">Nome:</Text> Silvio Emanoel de Oliveira
             Félix
-          </Text>
-          <Text>
+          </TextTitle>
+          <TextTitle>
             <Text className="title">Idade:</Text> {age} anos
-          </Text>
-          <Text>
+          </TextTitle>
+          <TextTitle>
             <Text className="title">Cidade:</Text> Piúma
-          </Text>
-          <Text>
+          </TextTitle>
+          <TextTitle>
             <Text className="title">Estado:</Text> Espirito Santo
-          </Text>
-          <Text>
+          </TextTitle>
+          <TextTitle>
             <Text className="title">Telefone:</Text> (28) 99900-2593
-          </Text>
-          <Text>
+          </TextTitle>
+          <TextTitle>
             <Text className="title">Email:</Text> silvio.felix32@hotmail.com
-          </Text>
+          </TextTitle>
         </Content>
         <SocialMedia>
-          <Popup
-            content={<HoverText>Baixar PDF</HoverText>}
-            position="top center"
-            offset={[0, 10]}
-            trigger={
-              <Button
-                $actualWiggle={actualWiggle === 0}
-                className="wiggle"
-                onClick={() => window.open("/documents/curriculo.pdf")}
-              >
-                <FaFileDownload />
-              </Button>
-            }
-          ></Popup>
+          <Tooltip title="Baixar PDF" arrow>
+            <Button
+              $actualWiggle={actualWiggle === 0}
+              className="wiggle"
+              onClick={() => window.open("/documents/curriculo.pdf")}
+            >
+              <FaFileDownload />
+            </Button>
+          </Tooltip>
           <Button
             $actualWiggle={actualWiggle === 1}
             className="wiggle"

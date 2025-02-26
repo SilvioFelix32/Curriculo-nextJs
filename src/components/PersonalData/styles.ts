@@ -48,7 +48,7 @@ export const Text = styled.p`
   flex-direction: row;
   padding: 0 12px;
   font-size: 28px;
-  font-weight: 300;
+  font-weight: 600;
   font-family: 500;
   color: ${(props) => props.theme.colors.textTitle};
   letter-spacing: 0.1rem;
@@ -73,9 +73,37 @@ export const Text = styled.p`
     padding: 0 6px;
     gap: 0;
   }
+`;
 
-  &.title {
-    font-weight: 600;
+export const TextTitle = styled.h2`
+  display: flex;
+  flex-direction: row;
+  padding: 0 12px;
+  font-size: 28px;
+  font-weight: 300;
+  font-family: 500;
+  color: ${(props) => props.theme.colors.textTitle};
+  letter-spacing: 0.1rem;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 24px;
+    padding: 0 10px;
+    gap: 12px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+    padding: 0 10px;
+    gap: 10px;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 14px;
+    padding: 0 8px;
+    gap: 0;
+  }
+  @media screen and (max-width: 360px) {
+    font-size: 12px;
+    padding: 0 6px;
+    gap: 0;
   }
 `;
 
