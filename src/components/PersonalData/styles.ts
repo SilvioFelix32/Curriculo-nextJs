@@ -15,7 +15,7 @@ export const PersonalDataTitle = styled.h1`
   font-size: 26px;
   font-weight: 600;
   font-family: 500;
-  color: ${(props) => props.theme.colors.textTitle};
+  color: ${(props) => props.theme.colors.text};
   text-align: center;
 
   @media screen and (max-width: 768px) {
@@ -69,7 +69,7 @@ export const PersonalDataLabel = styled.div`
   flex-direction: row;
   font-size: 18px;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.textTitle};
+  color: ${(props) => props.theme.colors.text};
   letter-spacing: 0.05rem;
 
   @media screen and (max-width: 1400px) {
@@ -97,7 +97,7 @@ export const SocialMediaTooltip = styled.div`
   display: flex;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 10;
-  color: ${(props) => props.theme.colors.textContent};
+  color: ${(props) => props.theme.colors.text};
   border-radius: 6px;
   padding: 0.8rem;
   font-size: 14px;
@@ -135,7 +135,7 @@ export const SocialMediaButton = styled.button<{ $actualWiggle: boolean }>`
   svg {
     height: 100%;
     width: 100%;
-    color: ${(props) => props.theme.colors.textTitle};
+    color: ${(props) => props.theme.colors.text};
     transform: scale(1);
 
     &:hover {

@@ -13,7 +13,7 @@ export const Title = styled.h1`
   font-size: 38px;
   font-weight: 600;
   font-family: 500;
-  color: ${(props) => props.theme.colors.textTitle};
+  color: ${(props) => props.theme.colors.text};
 
   @media screen and (max-width: 1366px) {
     font-size: 26px;
@@ -65,7 +65,7 @@ export const SkillTitle = styled.div`
 
 export const SkillContent = styled.div`
   padding: 1rem;
-  color: ${({ theme }) => theme.colors.textContent};
+  color: ${({ theme }) => theme.colors.text};
   animation: fadeIn 0.3s ease forwards;
 
   ul {
@@ -79,7 +79,7 @@ export const SkillContent = styled.div`
 
   li {
     background: ${({ theme }) => theme.colors.secundary};
-    color: ${({ theme }) => theme.colors.color};
+    color: ${({ theme }) => theme.colors.text};
     border-radius: 6px;
     font-size: 0.9rem;
     display: flex;

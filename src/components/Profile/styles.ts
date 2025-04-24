@@ -18,14 +18,8 @@ export const ProfileContainer = styled.div`
   }
 `;
 
-export const ProfileContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
-
 export const ProfileName = styled.h2`
-  color: ${(props) => props.theme.colors.textTitle};
+  color: ${(props) => props.theme.colors.text};
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
@@ -38,7 +32,7 @@ export const ProfileName = styled.h2`
 `;
 
 export const ProfileRole = styled.h3`
-  color: ${(props) => props.theme.colors.textContent};
+  color: ${(props) => props.theme.colors.text};
   font-size: 1.6rem;
   font-weight: 600;
   text-align: center;

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { MdOutlineLightMode, MdDarkMode } from "react-icons/md";
-import { ThemeContext } from "../../contexts/Theme";
+import { ThemeContext } from "../../../contexts/Theme";
 //styles
 import { StyledButton } from "./styled";
 

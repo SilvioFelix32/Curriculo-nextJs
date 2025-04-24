@@ -6,9 +6,6 @@ export default {
     primary: "#1A202C",
     secundary: "#2D3748",
     background: "#52D1C5",
-    color: "#EDEEEE",
-
-    textTitle: "#EDEEEE",
-    textContent: "#EDEEEE",
+    text: "#EDEEEE",
   },
 };

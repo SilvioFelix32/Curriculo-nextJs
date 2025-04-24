@@ -1,4 +1,4 @@
-export * from "./ChangeTheme";
+export * from "./Buttons/ThemeToggle";
 export * from "./ExperienceSection";
 export * from "./PersonalData";
 export * from "./Profile";

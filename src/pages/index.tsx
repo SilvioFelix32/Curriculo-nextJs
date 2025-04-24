@@ -8,7 +8,8 @@ import {
   Skills,
 } from "../components";
 //styles
-import { Wrapper, Box, TopBox, Content, Header, Theme } from "../styles";
+import { Wrapper, Box, TopBox, Content, Theme } from "../styles";
+import { Header } from "@/components/Header";
 
 export default function Home() {
   return (
@@ -16,9 +17,7 @@ export default function Home() {
       <Wrapper>
         <Content>
           <Box>
-            <Header>
-              Tema: <ThemeToggle />
-            </Header>
+            <Header />
             <TopBox>
               <Profile />
               <PersonalData />

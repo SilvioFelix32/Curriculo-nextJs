@@ -2,16 +2,13 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  height: 50px;
+  justify-content: flex-end;
   align-items: center;
-  padding: 1rem;
-  background-color: ${(props) => props.theme.colors.background};
-  color: ${(props) => props.theme.colors.textTitle};
-  font-size: 1.2rem;
+  width: 100%;
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 500;
+  color: ${(props) => props.theme.colors.text};
 `;

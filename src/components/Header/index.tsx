@@ -1,20 +1,15 @@
 import React from "react";
-import { LanguageToggle } from "../LanguageToggle";
-import { ThemeToggle } from "../ChangeTheme";
+import { ThemeToggle, LanguageToggle } from "../Buttons";
 import { HeaderContainer } from "./styles";
-import { useLanguage } from "../../contexts";
+import { useTranslator } from "../../contexts";
 
 export function Header() {
-  const { t } = useLanguage();
+  const { t } = useTranslator();
 
   return (
     <HeaderContainer>
-      <div>
-        {t("theme")}: <ThemeToggle />
-      </div>
-      <div>
-        {t("language")}: <LanguageToggle />
-      </div>
+      {t.get("header.language")}: <LanguageToggle />
+      {t.get("header.theme")}: <ThemeToggle />
     </HeaderContainer>
   );
 }

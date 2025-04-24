@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslator } from "../../contexts";
 import Tooltip from "@mui/material/Tooltip";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
@@ -16,6 +17,7 @@ import {
 
 export function PersonalData() {
   const [actualWiggle, setActualWiggle] = useState(0);
+  const { t } = useTranslator();
 
   useEffect(() => {
     const wiggleTimer = setInterval(() => {
@@ -53,31 +55,31 @@ export function PersonalData() {
 
   return (
     <PersonalDataContainer>
-      <PersonalDataTitle>Sobre</PersonalDataTitle>
+      <PersonalDataTitle>{t.get("personalData.title")}</PersonalDataTitle>
       <PersonalDataContent>
         <Section>
           <PersonalDataLabel>
-            Nome:
+            {t.get("personalData.name")}:
             <PersonalDataText>Silvio Félix</PersonalDataText>
           </PersonalDataLabel>
           <PersonalDataLabel>
-            Idade:
+            {t.get("personalData.age")}:
             <PersonalDataText>{age} anos</PersonalDataText>
           </PersonalDataLabel>
           <PersonalDataLabel>
-            Cidade:
+            {t.get("personalData.location")}:
             <PersonalDataText>Piúma</PersonalDataText>
           </PersonalDataLabel>
           <PersonalDataLabel>
-            Estado:
+            {t.get("personalData.state")}:
             <PersonalDataText>Espirito Santo</PersonalDataText>
           </PersonalDataLabel>
           <PersonalDataLabel>
-            Telefone:
+            {t.get("personalData.phone")}:
             <PersonalDataText>(28) 99900-2593</PersonalDataText>
           </PersonalDataLabel>
           <PersonalDataLabel>
-            Email:
+            {t.get("personalData.email")}:
             <PersonalDataText>silvio.felix32@hotmail.com</PersonalDataText>
           </PersonalDataLabel>
         </Section>

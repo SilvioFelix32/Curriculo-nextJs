@@ -9,12 +9,14 @@ import {
   ExpandButton,
   ContentWrapper,
 } from "./styles";
-import { experiences } from "./experiences";
+import { useExperiences } from "./experiences";
 
 export function ExperienceSection() {
   const [expandedSections, setExpandedSections] = useState<{
     [key: number]: boolean;
   }>({ 0: true });
+
+  const experiences = useExperiences();
 
   const toggleSection = (index: number) => {
     setExpandedSections((prev) => ({

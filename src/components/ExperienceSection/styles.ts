@@ -51,7 +51,7 @@ export const Title = styled.h2`
   padding: 1rem;
   color: ${({ theme }) => theme.colors.primary};
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -60,8 +60,8 @@ export const Title = styled.h2`
   transition: background-color 0.3s ease;
 `;
 
-export const Text = styled.p`
-  color: ${({ theme }) => theme.colors.textContent};
+export const Text = styled.div`
+  color: ${({ theme }) => theme.colors.text};
   line-height: 1;
   margin: 0 2rem 1rem;
   opacity: 0;

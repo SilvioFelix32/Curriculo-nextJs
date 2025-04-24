@@ -1,10 +1,5 @@
 import Image from "next/image";
-import {
-  ProfileContainer,
-  ProfileContent,
-  ProfileName,
-  ProfileRole,
-} from "./styles";
+import { ProfileContainer, ProfileName, ProfileRole } from "./styles";
 
 export function Profile() {
   return (

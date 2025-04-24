@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslator } from "../../contexts";
 import {
   Languages,
   FrontEnd,
@@ -18,6 +19,7 @@ import {
 } from "./styles";
 
 export function Skills() {
+  const { t } = useTranslator();
   const [expandedSkills, setExpandedSkills] = useState<{
     [key: string]: boolean;
   }>({});
@@ -30,10 +32,22 @@ export function Skills() {
   };
 
   const skills = [
-    { id: "LANGUAGES", title: "Linguagens", component: <Languages /> },
-    { id: "FRONT-END", title: "Front-end", component: <FrontEnd /> },
-    { id: "BACK-END", title: "Back-end", component: <BackEnd /> },
-    { id: "DATABASES", title: "Banco de Dados", component: <Databases /> },
+    {
+      id: "LANGUAGES",
+      title: t.get("skills.languages"),
+      component: <Languages />,
+    },
+    {
+      id: "FRONT-END",
+      title: t.get("skills.frontEnd"),
+      component: <FrontEnd />,
+    },
+    { id: "BACK-END", title: t.get("skills.backEnd"), component: <BackEnd /> },
+    {
+      id: "DATABASES",
+      title: t.get("skills.databases"),
+      component: <Databases />,
+    },
     {
       id: "TECNOLOGIES",
       title: "Cloud & Containers",
@@ -49,7 +63,7 @@ export function Skills() {
 
   return (
     <Wrapper>
-      <Title>Habilidades</Title>
+      <Title>{t.get("skills.title")}</Title>
       <Context>
         {skills.map((skill) => (
           <SkillItem key={skill.id}>

@@ -1,19 +1,18 @@
 import React from "react";
 import Head from "next/head";
-import { GetServerSideProps } from "next";
 import ThemePreferenceProvider from "@/contexts/Theme";
-import { LanguageProvider } from "@/contexts/Language";
-import Cookies from "js-cookie";
 import { MainApp } from "../components/MainApp";
+import Cookies from "js-cookie";
+import { TranslatorProvider } from "../contexts";
 //styles
 import { GlobalStyles } from "../styles/global";
 
 interface AppProps {
   Component: React.ComponentType<any>;
-  pageProps: AppProps;
+  pageProps: any;
 }
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const setDefaultColorTheme = () => {
     const favoriteTheme = Cookies.get("color-theme");
 
@@ -28,8 +27,8 @@ export default function App({ Component, pageProps }: AppProps) {
   setDefaultColorTheme();
 
   return (
-    <ThemePreferenceProvider>
-      <LanguageProvider>
+    <TranslatorProvider>
+      <ThemePreferenceProvider>
         <Head>
           <title>Sf-tech</title>
           <link rel="shortcut icon" href="/favicon.jpg" />
@@ -42,13 +41,9 @@ export default function App({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
           <GlobalStyles />
         </MainApp>
-      </LanguageProvider>
-    </ThemePreferenceProvider>
+      </ThemePreferenceProvider>
+    </TranslatorProvider>
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    props: {},
-  };
-};
+export default App;
