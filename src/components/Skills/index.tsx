@@ -4,80 +4,64 @@ import {
   FrontEnd,
   BackEnd,
   Frameworks,
-  Lang,
   Methodologies,
   Others,
   Databases,
 } from "./Options";
-import { Content, Context, Selector, Wrapper, Title } from "./styles";
+import {
+  Context,
+  Wrapper,
+  Title,
+  SkillItem,
+  SkillTitle,
+  SkillContent,
+} from "./styles";
 
 export function Skills() {
-  const [nextSkill, setNextSkill] = useState("LANGUAGES");
+  const [expandedSkills, setExpandedSkills] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  const toggleSkill = (skill: string) => {
+    setExpandedSkills((prev) => ({
+      ...prev,
+      [skill]: !prev[skill],
+    }));
+  };
+
+  const skills = [
+    { id: "LANGUAGES", title: "Linguagens", component: <Languages /> },
+    { id: "FRONT-END", title: "Front-end", component: <FrontEnd /> },
+    { id: "BACK-END", title: "Back-end", component: <BackEnd /> },
+    { id: "DATABASES", title: "Banco de Dados", component: <Databases /> },
+    {
+      id: "TECNOLOGIES",
+      title: "Cloud & Containers",
+      component: <Frameworks />,
+    },
+    {
+      id: "METODOLOGIES",
+      title: "Metodologias Ágeis",
+      component: <Methodologies />,
+    },
+    { id: "OTHERS", title: "Ferramentas", component: <Others /> },
+  ];
 
   return (
     <Wrapper>
       <Title>Habilidades</Title>
       <Context>
-        <Content>
-          <Selector
-            className={nextSkill === "LANGUAGES" ? "selected" : ""}
-            onClick={() => setNextSkill("LANGUAGES")}
-          >
-            Linguagens
-          </Selector>
-          <Selector
-            className={nextSkill === "FRONT-END" ? "selected" : ""}
-            onClick={() => setNextSkill("FRONT-END")}
-          >
-            Front-end
-          </Selector>
-          <Selector
-            className={nextSkill === "BACK-END" ? "selected" : ""}
-            onClick={() => setNextSkill("BACK-END")}
-          >
-            Back-end
-          </Selector>
-          <Selector
-            className={nextSkill === "DATABASES" ? "selected" : ""}
-            onClick={() => setNextSkill("DATABASES")}
-          >
-            Banco de Dados
-          </Selector>
-          <Selector
-            className={nextSkill === "TECNOLOGIES" ? "selected" : ""}
-            onClick={() => setNextSkill("TECNOLOGIES")}
-          >
-            Tecnologias
-          </Selector>
-          <Selector
-            className={nextSkill === "LANG" ? "selected" : ""}
-            onClick={() => setNextSkill("LANG")}
-          >
-            Idiomas
-          </Selector>
-          <Selector
-            className={nextSkill === "METODOLOGIES" ? "selected" : ""}
-            onClick={() => setNextSkill("METODOLOGIES")}
-          >
-            Metodologias
-          </Selector>
-          <Selector
-            className={nextSkill === "OTHERS" ? "selected" : ""}
-            onClick={() => setNextSkill("OTHERS")}
-          >
-            Outros
-          </Selector>
-        </Content>
-        <Content>
-          {nextSkill === "LANGUAGES" && <Languages />}
-          {nextSkill === "FRONT-END" && <FrontEnd />}
-          {nextSkill === "BACK-END" && <BackEnd />}
-          {nextSkill === "DATABASES" && <Databases />}
-          {nextSkill === "TECNOLOGIES" && <Frameworks />}
-          {nextSkill === "LANG" && <Lang />}
-          {nextSkill === "METODOLOGIES" && <Methodologies />}
-          {nextSkill === "OTHERS" && <Others />}
-        </Content>
+        {skills.map((skill) => (
+          <SkillItem key={skill.id}>
+            <SkillTitle onClick={() => toggleSkill(skill.id)}>
+              {skill.title}
+              <span>{expandedSkills[skill.id] ? "▼" : "▶"}</span>
+            </SkillTitle>
+            {expandedSkills[skill.id] && (
+              <SkillContent>{skill.component}</SkillContent>
+            )}
+          </SkillItem>
+        ))}
       </Context>
     </Wrapper>
   );

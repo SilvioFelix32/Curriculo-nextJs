@@ -1,22 +1,23 @@
 import Image from "next/image";
-import { Content, Wrapper, Picture } from "./styles";
+import {
+  ProfileContainer,
+  ProfileContent,
+  ProfileName,
+  ProfileRole,
+} from "./styles";
 
 export function Profile() {
   return (
-    <Wrapper>
-      <Picture>
-        <Image
-          src={"/images/eu.jpg"}
-          alt="Picture_Of_author"
-          height={350}
-          width={350}
-          className="image"
-        />
-      </Picture>
-      <Content>
-        <Content className="name">Silvio Félix</Content>
-        <Content className="stack">Full-Stack Developer</Content>
-      </Content>
-    </Wrapper>
+    <ProfileContainer>
+      <Image
+        src={"/images/eu.jpg"}
+        alt="Picture_Of_author"
+        height={250}
+        width={250}
+        className="image"
+      />
+      <ProfileName>Silvio Félix</ProfileName>
+      <ProfileRole>Full-Stack Developer</ProfileRole>
+    </ProfileContainer>
   );
 }
