@@ -38,13 +38,14 @@ export const Content = styled.div`
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<{ isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 1rem;
   background-color: ${({ theme }) => theme.colors.primary};
   outline: 1px solid ${({ theme }) => theme.colors.background};
   border-radius: 6px;
+  padding: 0 0 ${({ isExpanded }) => (isExpanded ? "1rem" : "0")};
 `;
 
 export const Title = styled.h2`
@@ -63,7 +64,7 @@ export const Title = styled.h2`
 export const Text = styled.div`
   color: ${({ theme }) => theme.colors.text};
   line-height: 1;
-  margin: 0 2rem 1rem;
+  margin: 0 2rem;
   opacity: 0;
   animation: fadeIn 0.3s ease forwards;
 

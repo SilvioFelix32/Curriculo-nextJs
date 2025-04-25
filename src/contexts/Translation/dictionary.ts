@@ -110,6 +110,8 @@ export const dictionary: TranslationMultiLanguageDictionary = {
       frontEnd: "Front-end",
       backEnd: "Back-end",
       databases: "Banco de Dados",
+      methodologies: "Metodologias Ágeis",
+      tools: "Ferramentas",
     },
     personalData: {
       title: "Sobre",
@@ -119,6 +121,7 @@ export const dictionary: TranslationMultiLanguageDictionary = {
       state: "Estado",
       phone: "Telefone",
       email: "Email",
+      years: "anos",
     },
   },
   "en-us": {
@@ -224,6 +227,8 @@ export const dictionary: TranslationMultiLanguageDictionary = {
       frontEnd: "Front-end",
       backEnd: "Back-end",
       databases: "Databases",
+      methodologies: "Methodologies",
+      tools: "Tools",
     },
     personalData: {
       title: "About",
@@ -233,6 +238,7 @@ export const dictionary: TranslationMultiLanguageDictionary = {
       state: "State",
       phone: "Phone",
       email: "Email",
+      years: "years",
     },
   },
 };

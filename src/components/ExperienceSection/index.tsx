@@ -30,7 +30,7 @@ export function ExperienceSection() {
       <ScrollContainer>
         {experiences.map((experience, index) => (
           <Content key={index} onClick={() => toggleSection(index)}>
-            <ContentWrapper>
+            <ContentWrapper isExpanded={expandedSections[index]}>
               <Title>
                 {experience.title}
                 <ExpandButton>
@@ -40,7 +40,7 @@ export function ExperienceSection() {
               {expandedSections[index] &&
                 experience.text.map((paragraph, i) => (
                   <Text key={i}>
-                    <ReactMarkdown>{paragraph}</ReactMarkdown>
+                    {paragraph && <ReactMarkdown>{paragraph}</ReactMarkdown>}
                   </Text>
                 ))}
             </ContentWrapper>

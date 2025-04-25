@@ -13,6 +13,7 @@ export const ProfileContainer = styled.div`
   }
 
   @media screen and (max-width: 1276px) {
+    padding: 0 0 1rem;
     align-items: center;
     justify-content: center;
   }

@@ -64,7 +64,9 @@ export function PersonalData() {
           </PersonalDataLabel>
           <PersonalDataLabel>
             {t.get("personalData.age")}:
-            <PersonalDataText>{age} anos</PersonalDataText>
+            <PersonalDataText>
+              {age} {t.get("personalData.years")}
+            </PersonalDataText>
           </PersonalDataLabel>
           <PersonalDataLabel>
             {t.get("personalData.location")}:

@@ -55,10 +55,10 @@ export function Skills() {
     },
     {
       id: "METODOLOGIES",
-      title: "Metodologias Ágeis",
+      title: t.get("skills.methodologies"),
       component: <Methodologies />,
     },
-    { id: "OTHERS", title: "Ferramentas", component: <Others /> },
+    { id: "OTHERS", title: t.get("skills.tools"), component: <Others /> },
   ];
 
   return (

@@ -78,7 +78,7 @@ export const SkillContent = styled.div`
   }
 
   li {
-    background: ${({ theme }) => theme.colors.secundary};
+    background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.text};
     border-radius: 6px;
     font-size: 0.9rem;
