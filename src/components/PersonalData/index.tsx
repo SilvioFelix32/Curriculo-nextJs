@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from "react";
+import { useTranslator } from "../../contexts";
 import Tooltip from "@mui/material/Tooltip";
 import { FaLinkedin, FaGithubSquare, FaFileDownload } from "react-icons/fa";
 import { SiWhatsapp } from "react-icons/si";
 // styles
 import {
-  Content,
-  Wrapper,
-  Text,
-  Title,
-  Box,
-  SocialMedia,
-  Button,
-  HoverText,
-  TextTitle,
+  PersonalDataContainer,
+  PersonalDataContent,
+  PersonalDataText,
+  PersonalDataTitle,
+  PersonalDataLabel,
+  SocialMediaContainer,
+  SocialMediaButton,
+  Section,
 } from "./styles";
 
 export function PersonalData() {
   const [actualWiggle, setActualWiggle] = useState(0);
+  const { t } = useTranslator();
 
   useEffect(() => {
     const wiggleTimer = setInterval(() => {
@@ -26,7 +27,7 @@ export function PersonalData() {
     return () => clearInterval(wiggleTimer);
   }, []);
 
-  function calculateAge(dateOfBirth) {
+  function calculateAge(dateOfBirth: string) {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
@@ -53,67 +54,70 @@ export function PersonalData() {
   const age = calculateAge(dateOfBirth);
 
   return (
-    <Wrapper>
-      <Title>Sobre Mim</Title>
-      <Box>
-        <Content>
-          <TextTitle>
-            <Text className="title">Nome:</Text> Silvio Emanoel de Oliveira
-            Félix
-          </TextTitle>
-          <TextTitle>
-            <Text className="title">Idade:</Text> {age} anos
-          </TextTitle>
-          <TextTitle>
-            <Text className="title">Cidade:</Text> Piúma
-          </TextTitle>
-          <TextTitle>
-            <Text className="title">Estado:</Text> Espirito Santo
-          </TextTitle>
-          <TextTitle>
-            <Text className="title">Telefone:</Text> (28) 99900-2593
-          </TextTitle>
-          <TextTitle>
-            <Text className="title">Email:</Text> silvio.felix32@hotmail.com
-          </TextTitle>
-        </Content>
-        <SocialMedia>
+    <PersonalDataContainer>
+      <PersonalDataTitle>{t.get("personalData.title")}</PersonalDataTitle>
+      <PersonalDataContent>
+        <Section>
+          <PersonalDataLabel>
+            {t.get("personalData.name")}:
+            <PersonalDataText>Silvio Félix</PersonalDataText>
+          </PersonalDataLabel>
+          <PersonalDataLabel>
+            {t.get("personalData.age")}:
+            <PersonalDataText>
+              {age} {t.get("personalData.years")}
+            </PersonalDataText>
+          </PersonalDataLabel>
+          <PersonalDataLabel>
+            {t.get("personalData.location")}:
+            <PersonalDataText>Piúma</PersonalDataText>
+          </PersonalDataLabel>
+          <PersonalDataLabel>
+            {t.get("personalData.state")}:
+            <PersonalDataText>Espirito Santo</PersonalDataText>
+          </PersonalDataLabel>
+          <PersonalDataLabel>
+            {t.get("personalData.phone")}:
+            <PersonalDataText>(28) 99900-2593</PersonalDataText>
+          </PersonalDataLabel>
+          <PersonalDataLabel>
+            {t.get("personalData.email")}:
+            <PersonalDataText>silvio.felix32@hotmail.com</PersonalDataText>
+          </PersonalDataLabel>
+        </Section>
+        <SocialMediaContainer>
           <Tooltip title="Baixar PDF" arrow>
-            <Button
+            <SocialMediaButton
               $actualWiggle={actualWiggle === 0}
-              className="wiggle"
               onClick={() => window.open("/documents/curriculo.pdf")}
             >
               <FaFileDownload />
-            </Button>
+            </SocialMediaButton>
           </Tooltip>
-          <Button
+          <SocialMediaButton
             $actualWiggle={actualWiggle === 1}
-            className="wiggle"
             onClick={() => window.open("https://github.com/SilvioFelix32")}
           >
             <FaGithubSquare />
-          </Button>
-          <Button
+          </SocialMediaButton>
+          <SocialMediaButton
             $actualWiggle={actualWiggle === 2}
-            className="wiggle"
             onClick={() =>
               window.open("https://www.linkedin.com/in/silviofelix32/")
             }
           >
             <FaLinkedin />
-          </Button>
-          <Button
+          </SocialMediaButton>
+          <SocialMediaButton
             $actualWiggle={actualWiggle === 3}
-            className="wiggle"
             onClick={() =>
               window.open("https://api.whatsapp.com/send?phone=5528999002593")
             }
           >
             <SiWhatsapp />
-          </Button>
-        </SocialMedia>
-      </Box>
-    </Wrapper>
+          </SocialMediaButton>
+        </SocialMediaContainer>
+      </PersonalDataContent>
+    </PersonalDataContainer>
   );
 }

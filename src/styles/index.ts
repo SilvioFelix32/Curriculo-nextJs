@@ -2,69 +2,58 @@ import styled from "styled-components";
 
 export const Theme = styled.div`
   height: 100%;
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.primary};
 `;
 
 export const Wrapper = styled.div`
   height: 100%;
-  background-color: ${(props) => props.theme.colors.primary};
+  max-width: 85%;
+  margin: 0 auto;
 `;
 
 export const Content = styled.div`
-  width: 85%;
+  width: 100%;
+  max-width: 1500px;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: ${(props) => props.theme.colors.primary};
+  background: ${({ theme }) => theme.colors.primary};
+  padding: 2rem;
+
   @media screen and (max-width: 720px) {
-    width: 100%;
+    padding: 1rem;
   }
-`;
-
-export const Header = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 15px;
-
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: 500;
-  color: ${(props) => props.theme.colors.textTitle};
 `;
 
 export const Box = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 20px 100px 0 100px;
+  padding: 20px 0;
 
   @media screen and (max-width: 1366px) {
-    padding: 20px 50px 0 50px;
+    padding: 20px 0;
   }
-
   @media screen and (max-width: 768px) {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0;
   }
   @media screen and (max-width: 428px) {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0;
   }
   @media screen and (max-width: 360px) {
-    padding: 20px 20px 0 20px;
+    padding: 20px 0;
   }
 `;
 
 export const TopBox = styled.div`
-  padding-top: 10px;
-  max-height: 550px;
+  max-height: 335px;
   display: flex;
   justify-content: space-between;
-  background-color: ${(props) => props.theme.colors.primary};
 
   @media screen and (max-width: 1276px) {
     padding-top: 28px;
     max-height: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
   }
   @media screen and (max-width: 428px) {

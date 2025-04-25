@@ -1,61 +1,96 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 98%;
+  width: 100%;
+`;
+
+export const ScrollContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  margin: 15px auto;
-  padding: 20px;
+  gap: 1rem;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.colors.background};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.colors.primary};
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: ${({ theme }) => theme.colors.secundary};
+  }
 `;
 
 export const Content = styled.div`
+  background: ${({ theme }) => theme.colors.background};
+  border-radius: 6px;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+`;
+
+export const ContentWrapper = styled.div<{ isExpanded: boolean }>`
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  background-color: ${({ theme }) => theme.colors.primary};
+  outline: 1px solid ${({ theme }) => theme.colors.background};
+  border-radius: 6px;
+  padding: 0 0 ${({ isExpanded }) => (isExpanded ? "1rem" : "0")};
+`;
+
+export const Title = styled.h2`
+  padding: 1rem;
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  background: ${({ theme }) => theme.colors.background};
+  transition: background-color 0.3s ease;
 `;
 
-export const Title = styled.h1`
-  font-size: 42px;
-  font-weight: 600;
-  font-family: 500;
-  color: ${(props) => props.theme.colors.textContent};
-  margin-bottom: 15px;
+export const Text = styled.div`
+  color: ${({ theme }) => theme.colors.text};
+  line-height: 1;
+  margin: 0 2rem;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
 
-  @media screen and (max-width: 1366px) {
-    font-size: 36px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 26px;
-  }
-  @media screen and (max-width: 428px) {
-    font-size: 24px;
-  }
-  @media screen and (max-width: 360px) {
-    font-size: 22px;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
 
-export const Text = styled.p`
-  font-size: 30px;
-  font-weight: 300;
-  font-family: 500;
-  color: ${(props) => props.theme.colors.textContent};
-  letter-spacing: 0.1rem;
-  text-align: center;
-  max-width: 1300px;
+export const ExpandButton = styled.button`
+  background: none;
+  border: none;
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
 
-  @media screen and (max-width: 1366px) {
-    font-size: 26px;
-  }
-  @media screen and (max-width: 768px) {
-    font-size: 22px;
-  }
-  @media screen and (max-width: 428px) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: 360px) {
-    font-size: 12px;
+  &:hover {
+    transform: scale(1.1);
   }
 `;
+1;

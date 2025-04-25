@@ -1,33 +1,68 @@
-export const experiences = [
-  {
-    title: "Minha História:",
-    text: [
-      "Minha paixão por tecnologia começou cedo e me levou a explorar o desenvolvimento web, iniciando com JavaScript.",
-      "Como desenvolvedor fullstack, busco constantemente soluções eficientes e elegantes,",
-      "unindo criatividade e resolução de problemas.",
-    ],
-  },
-  {
-    title: "Experiência:",
-    text: [
-      "Analista Desenvolvedor Full Stack - Empresa: SysMap Solutions. Período: 12/2023 - Atualmente",
-      "Analista Desenvolvedor Full Stack- Empresa: SysMap Solutions. Período: 02/2022 - 05/2022.",
-      "Desenvolvedor FullStack - Empresa: Uni System Automação e Tecnologia. Período: 11/2021 – 02/2022.",
-      "Desenvolvedor Fullstack- Freelancer. Período: 02/2021 – 11/2021.",
-    ],
-  },
-  {
-    title: "Educação:",
-    text: [
-      "Udemy - Curso Web Moderno Completo com JavaScript + Projetos",
-      "Udemy - Node.js Microservices: NestJS, RabbitMQ and Cloud Services",
-      "Rocketseat - Ignite - Programa de aceleração de carreira full-stack",
-      "Udemy - TypeScript do básico ao avançado (c/ React, Express)",
-      "Udemy - Docker para Desenvolvedores (com Docker Swarm e Kubernetes)",
-      "Udemy - AWS Lambda & Serverless - (Amazon Cognito|Lambda|ApiGateWay|DynamoDB)",
-      "Rocketseat - Java e Spring Boot",
-      "Triggo.AI - IA Literacy - Introdução ao Machine Learning",
-      "Udemy - JavaScript Funcional e Reativo",
-    ],
-  },
-];
+import { useTranslator } from "@/contexts/Translation";
+
+export const useExperiences = () => {
+  const { t } = useTranslator();
+
+  return [
+    {
+      title: t.get("experiences.myStory.title"),
+      text: [t.get("experiences.myStory.text")],
+    },
+    {
+      title: t.get("experiences.professional.title"),
+      text: [
+        `**${t.get("experiences.professional.sysmap.title")}**`,
+        ...t
+          .get("experiences.professional.sysmap.items")
+          .map((item) => `* ${item}`),
+        "",
+        `**${t.get("experiences.professional.firstTeam.title")}**`,
+        ...t
+          .get("experiences.professional.firstTeam.items")
+          .map((item) => `* ${item}`),
+        "",
+        `**${t.get("experiences.professional.uniSystem.title")}**`,
+        ...t
+          .get("experiences.professional.uniSystem.items")
+          .map((item) => `* ${item}`),
+        "",
+        `**${t.get("experiences.professional.freelance.title")}**`,
+        ...t
+          .get("experiences.professional.freelance.items")
+          .map((item) => `* ${item}`),
+      ],
+    },
+    {
+      title: t.get("experiences.education.title"),
+      text: [
+        `**${t.get("experiences.education.aiLiteracy.title")}**`,
+        `* ${t.get("experiences.education.aiLiteracy.institution")}`,
+        `* ${t.get("experiences.education.aiLiteracy.skills")}`,
+        "",
+        `**${t.get("experiences.education.aws.title")}**`,
+        `* ${t.get("experiences.education.aws.institution")}`,
+        `* ${t.get("experiences.education.aws.skills")}`,
+        "",
+        `**${t.get("experiences.education.java.title")}**`,
+        `* ${t.get("experiences.education.java.institution")}`,
+        `* ${t.get("experiences.education.java.skills")}`,
+        "",
+        `**${t.get("experiences.education.docker.title")}**`,
+        `* ${t.get("experiences.education.docker.institution")}`,
+        `* ${t.get("experiences.education.docker.skills")}`,
+        "",
+        `**${t.get("experiences.education.typescript.title")}**`,
+        `* ${t.get("experiences.education.typescript.institution")}`,
+        `* ${t.get("experiences.education.typescript.skills")}`,
+        "",
+        `**${t.get("experiences.education.microservices.title")}**`,
+        `* ${t.get("experiences.education.microservices.institution")}`,
+        `* ${t.get("experiences.education.microservices.skills")}`,
+        "",
+        `**${t.get("experiences.education.webModern.title")}**`,
+        `* ${t.get("experiences.education.webModern.institution")}`,
+        `* ${t.get("experiences.education.webModern.skills")}`,
+      ],
+    },
+  ];
+};

@@ -5,20 +5,17 @@ export const StyledButton = styled.button`
   border: none;
   height: 50px;
   padding: 10px;
-  color: yellow;
+  color: ${({ theme }) => theme.colors.text};
   background-color: ${({ theme }) => theme.colors.primary};
-
+  margin-left: 5px;
   svg {
     height: 32px;
     width: 32px;
     transition: filter 0.2s;
+    color: yellow;
 
     &:hover {
       filter: brightness(0.9);
     }
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-right: 22px;
   }
 `;
